@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proyecto Lentes de Contacto · Investigación</title>
+<meta name="description" content="Resumen de investigación: oportunidad de mercado, competencia, modelo de negocio y marca para un e-commerce de lentes de contacto en Colombia.">
+<style>
+  :root{
+    --bg:#0b1020; --bg2:#111832; --card:#151d3a; --line:#26305a;
+    --txt:#e9edf7; --muted:#a3adcc; --accent:#5b8cff; --accent2:#22d3a6;
+    --warn:#ffb454; --radius:16px; --maxw:1080px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:radial-gradient(1200px 600px at 80% -10%, #1a2450 0%, var(--bg) 55%) fixed, var(--bg);
+    color:var(--txt); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 20px}
+
+  /* NAV */
+  nav{position:sticky; top:0; z-index:20; backdrop-filter:blur(10px);
+    background:rgba(11,16,32,.72); border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex; align-items:center; justify-content:space-between; height:60px; gap:16px}
+  .brand{font-weight:700; letter-spacing:.3px}
+  .brand span{color:var(--accent)}
+  .navlinks{display:flex; gap:22px; flex-wrap:wrap; font-size:.92rem}
+  .navlinks a{color:var(--muted)}
+  .navlinks a:hover{color:var(--txt); text-decoration:none}
+  @media(max-width:720px){ .navlinks{display:none} }
+
+  /* HERO */
+  header.hero{padding:72px 0 40px}
+  .kicker{display:inline-block; font-size:.8rem; letter-spacing:2px; text-transform:uppercase;
+    color:var(--accent2); border:1px solid var(--line); padding:6px 12px; border-radius:999px; margin-bottom:22px}
+  h1{font-size:clamp(2rem,5vw,3.2rem); line-height:1.1; margin:.2em 0 .3em; font-weight:800}
+  .lede{font-size:1.15rem; color:var(--muted); max-width:720px}
+  .stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:16px; margin-top:40px}
+  .stat{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:20px}
+  .stat .num{font-size:1.9rem; font-weight:800; color:var(--accent)}
+  .stat .lbl{color:var(--muted); font-size:.9rem; margin-top:4px}
+
+  /* SECTIONS */
+  section{padding:52px 0; border-top:1px solid var(--line)}
+  .eyebrow{font-size:.8rem; letter-spacing:2px; text-transform:uppercase; color:var(--accent2); margin:0 0 6px}
+  h2{font-size:clamp(1.5rem,3.5vw,2.1rem); margin:0 0 18px; font-weight:800}
+  h3{font-size:1.15rem; margin:0 0 8px}
+  p{margin:0 0 14px}
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:20px}
+  .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:20px}
+  @media(max-width:760px){ .grid2,.grid3{grid-template-columns:1fr} }
+  .card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:22px}
+  .card h3{color:var(--txt)}
+  .card p{color:var(--muted); margin-bottom:0}
+  .tag{display:inline-block; font-size:.75rem; color:var(--accent2); border:1px solid var(--line);
+    padding:2px 10px; border-radius:999px; margin-bottom:10px}
+
+  table{width:100%; border-collapse:collapse; background:var(--card);
+    border:1px solid var(--line); border-radius:var(--radius); overflow:hidden}
+  th,td{padding:12px 14px; text-align:left; border-bottom:1px solid var(--line); font-size:.95rem}
+  th{background:var(--bg2); color:var(--txt); font-weight:700}
+  td{color:var(--muted)}
+  tr:last-child td{border-bottom:none}
+
+  .pill{display:inline-block; padding:3px 10px; border-radius:999px; font-size:.78rem; font-weight:600}
+  .p-t1{background:rgba(34,211,166,.15); color:var(--accent2)}
+  .p-t2{background:rgba(91,140,255,.15); color:var(--accent)}
+  .p-out{background:rgba(255,180,84,.15); color:var(--warn)}
+
+  ul.clean{list-style:none; padding:0; margin:0}
+  ul.clean li{padding:10px 0 10px 28px; position:relative; color:var(--muted); border-bottom:1px solid var(--line)}
+  ul.clean li:last-child{border-bottom:none}
+  ul.clean li::before{content:"→"; position:absolute; left:0; color:var(--accent)}
+
+  .note{background:rgba(255,180,84,.08); border:1px solid rgba(255,180,84,.35);
+    border-radius:12px; padding:14px 16px; color:#f4d9ac; font-size:.9rem}
+
+  /* TIMELINE */
+  .timeline{position:relative; margin-top:10px; padding-left:26px}
+  .timeline::before{content:""; position:absolute; left:7px; top:6px; bottom:6px; width:2px; background:var(--line)}
+  .tl-item{position:relative; padding:0 0 22px 6px}
+  .tl-item::before{content:""; position:absolute; left:-24px; top:6px; width:12px; height:12px;
+    border-radius:50%; background:var(--accent); box-shadow:0 0 0 4px rgba(91,140,255,.15)}
+  .tl-item.done::before{background:var(--accent2); box-shadow:0 0 0 4px rgba(34,211,166,.15)}
+
+  footer{padding:40px 0 60px; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem}
+  .badge{font-size:.78rem; color:var(--muted)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">Proyecto <span>Lentes</span></div>
+    <div class="navlinks">
+      <a href="#mercado">Mercado</a>
+      <a href="#competencia">Competencia</a>
+      <a href="#modelo">Modelo & Costos</a>
+      <a href="#marca">Marca</a>
+      <a href="#roadmap">Roadmap</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="kicker">Investigación · E-commerce de lentes de contacto · Colombia</span>
+    <h1>Una brecha de precios estructural en el mercado colombiano de lentes de contacto.</h1>
+    <p class="lede">Resumen de la investigación realizada hasta ahora: la oportunidad de mercado, el mapa competitivo, el modelo de negocio DTC y los costos, y el estado de la marca. Documento de trabajo para revisión.</p>
+
+    <div class="stats">
+      <div class="stat"><div class="num">2–2.7×</div><div class="lbl">Precio en Colombia vs. Europa por el mismo producto</div></div>
+      <div class="stat"><div class="num">DTC</div><div class="lbl">Modelo directo al consumidor con marcas de valor</div></div>
+      <div class="stat"><div class="num">Online</div><div class="lbl">LentesPlus como principal pure-player; el resto en Shopify</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- MERCADO -->
+<section id="mercado">
+  <div class="wrap">
+    <p class="eyebrow">01 · Oportunidad</p>
+    <h2>Oportunidad de mercado</h2>
+    <p style="color:var(--muted); max-width:760px">
+      El punto de partida es una <strong style="color:var(--txt)">ineficiencia estructural de precios</strong>: en Colombia
+      los lentes de contacto se venden a aproximadamente <strong style="color:var(--txt)">2 a 2.7 veces</strong> el precio
+      europeo por un producto idéntico. Eso abre espacio para un modelo directo al consumidor (DTC) que traslade parte de
+      ese margen al comprador y aun así opere con rentabilidad sana.
+    </p>
+
+    <div class="grid3" style="margin-top:8px">
+      <div class="card">
+        <span class="tag">Brecha de precios</span>
+        <h3>2–2.7× más caro</h3>
+        <p>El precio colombiano supera al europeo para el mismo SKU. Benchmarking internacional apoyado en plataformas europeas de comparación de precios.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Costo real de uso</span>
+        <h3>Costos ocultos recurrentes</h3>
+        <p>El costo mensual real de usar lentes es bastante mayor que el precio de la caja: soluciones, reemplazos y consumibles suman. Es un ángulo de mensaje potente.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Palanca de marca</span>
+        <h3>Marcas de valor</h3>
+        <p>Apalancarse en fabricantes como Interojo / Comfortvue permite ofrecer calidad a un precio agresivo bajo marca propia.</p>
+      </div>
+    </div>
+
+    <div class="note" style="margin-top:20px">
+      Nota: las cifras provienen de la investigación previa del proyecto (benchmarking Colombia vs. Europa).
+      Antes de presentar externamente conviene refrescar precios actuales con capturas y links por SKU.
+    </div>
+  </div>
+</section>
+
+<!-- COMPETENCIA -->
+<section id="competencia">
+  <div class="wrap">
+    <p class="eyebrow">02 · Panorama</p>
+    <h2>Competencia</h2>
+    <p style="color:var(--muted); max-width:760px">
+      El mercado está dominado por incumbentes omnicanal fuertes, con un único pure-player online relevante y bien financiado.
+      La mayoría de los demás jugadores corren sobre Shopify, lo que da pistas sobre su nivel de sofisticación técnica.
+    </p>
+
+    <table style="margin-top:8px">
+      <thead>
+        <tr><th>Jugador</th><th>Rol</th><th>Notas</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong style="color:var(--txt)">GMO / EssilorLuxottica</strong></td>
+          <td>Incumbente omnicanal</td>
+          <td>Uno de los dos dominantes; respaldo del grupo óptico global más grande.</td>
+        </tr>
+        <tr>
+          <td><strong style="color:var(--txt)">Lafam / GrandVision</strong></td>
+          <td>Incumbente omnicanal</td>
+          <td>Cadena óptica con fuerte presencia física y respaldo internacional.</td>
+        </tr>
+        <tr>
+          <td><strong style="color:var(--txt)"><a href="https://www.lentesplus.com/co/" target="_blank" rel="noopener">LentesPlus</a></strong></td>
+          <td>Pure-player online líder</td>
+          <td>Bien financiado. Arquitectura headless (React SPA), lo que dificulta extraer sus precios por fetch directo.</td>
+        </tr>
+        <tr>
+          <td><strong style="color:var(--txt)">Otros retailers</strong></td>
+          <td>Long tail</td>
+          <td>Mayoría sobre Shopify (patrones de URL /collections/ y /products/ lo delatan).</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="grid2" style="margin-top:20px">
+      <div class="card">
+        <h3>Lectura técnica</h3>
+        <p>URLs /collections/ y /products/ señalan Shopify de forma fiable; dependencia de JS sin SSR señala arquitectura headless/SPA. LentesPlus (SPA) obliga a triangular precios vía agregadores de cupones y fuentes de terceros.</p>
+      </div>
+      <div class="card">
+        <h3>Hueco competitivo</h3>
+        <p>Los incumbentes son omnicanal y caros; el pure-player líder está bien posicionado pero no compite en precio agresivo con marca de valor. Ahí está el espacio DTC.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODELO -->
+<section id="modelo">
+  <div class="wrap">
+    <p class="eyebrow">03 · Negocio</p>
+    <h2>Modelo de negocio y costos</h2>
+    <p style="color:var(--muted); max-width:760px">
+      Modelo <strong style="color:var(--txt)">directo al consumidor (DTC)</strong> con marca propia sobre fabricantes de valor,
+      capturando parte de la brecha de precios. El foco está en el margen real después de costos ocultos y comisiones de pago.
+    </p>
+
+    <div class="grid2" style="margin-top:8px">
+      <div class="card">
+        <h3>Palancas de margen</h3>
+        <ul class="clean">
+          <li>Compra a fabricante de valor (Interojo / Comfortvue) bajo marca propia</li>
+          <li>Traslado parcial de la brecha 2–2.7× al precio de venta</li>
+          <li>Venta online sin costos de red física omnicanal</li>
+          <li>Mensaje del "costo real mensual" para justificar recompra y suscripción</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Costos a vigilar</h3>
+        <ul class="clean">
+          <li>Comisiones de pasarela de pago (ver tabla)</li>
+          <li>Logística y última milla</li>
+          <li>Devoluciones y fórmula óptica incorrecta</li>
+          <li>Importación / arancel según fabricante</li>
+          <li>Adquisición de cliente (CAC) vs. LTV</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="margin-top:28px">Pasarelas de pago evaluadas</h3>
+    <p style="color:var(--muted)">Se hizo un benchmark de opciones para el mercado colombiano. Las comisiones exactas deben confirmarse con cada proveedor antes de decidir.</p>
+    <table>
+      <thead><tr><th>Pasarela</th><th>Enfoque</th><th>Estado</th></tr></thead>
+      <tbody>
+        <tr><td>Wompi</td><td>Local (Bancolombia)</td><td class="badge">Benchmarkeada</td></tr>
+        <tr><td>ePayco</td><td>Local</td><td class="badge">Benchmarkeada</td></tr>
+        <tr><td>Bold</td><td>Local</td><td class="badge">Benchmarkeada</td></tr>
+        <tr><td>PayU</td><td>Regional LatAm</td><td class="badge">Benchmarkeada</td></tr>
+        <tr><td>Mercado Pago</td><td>Regional LatAm</td><td class="badge">Benchmarkeada</td></tr>
+        <tr><td>Stripe</td><td>Internacional</td><td class="badge">Benchmarkeada</td></tr>
+      </tbody>
+    </table>
+    <div class="note" style="margin-top:16px">
+      Pendiente: cargar la tabla con las tasas de comisión aproximadas por transacción de cada pasarela (dato ya levantado en la investigación, conviene verificarlo a la fecha actual antes de mostrarlo).
+    </div>
+  </div>
+</section>
+
+<!-- MARCA -->
+<section id="marca">
+  <div class="wrap">
+    <p class="eyebrow">04 · Identidad</p>
+    <h2>Marca</h2>
+    <p style="color:var(--muted); max-width:760px">
+      Se completaron dos rondas de investigación y verificación de nombres, revisando disponibilidad de dominio en
+      <code>.co</code> y <code>.com</code> (resolución DNS + búsqueda de colisiones de marca). Aún no hay nombre final elegido.
+    </p>
+
+    <div class="grid3" style="margin-top:8px">
+      <div class="card">
+        <h3>Tier 1 <span class="pill p-t1">.co y .com libres</span></h3>
+        <p style="color:var(--txt); font-weight:600; line-height:2">vistari · oculae · neuravist · lenteclub · clublente · nitide · veoo · veda</p>
+      </div>
+      <div class="card">
+        <h3>Tier 2 <span class="pill p-t2">.co libre · .com tomado</span></h3>
+        <p style="color:var(--txt); font-weight:600; line-height:2">klarvi · novavista · vizza · ocuvia · lentia · guino · lucido</p>
+      </div>
+      <div class="card">
+        <h3>Descartados <span class="pill p-out">con razón</span></h3>
+        <p><strong style="color:var(--txt)">neuvia</strong> — saturación en salud<br>
+        <strong style="color:var(--txt)">veralens</strong> — colisión de marca existente<br>
+        <strong style="color:var(--txt)">claru</strong> — conflicto con app de salud</p>
+      </div>
+    </div>
+
+    <div class="note" style="margin-top:20px">
+      Estado: el primer lote se rechazó por poco novedoso. El segundo lote (inspirado en anatomía del ojo — fovea, irida;
+      luz/claridad — lucido, nitide, halo; y español lúdico — guino de "guiño") está sobre la mesa, sin selección final.
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section id="roadmap">
+  <div class="wrap">
+    <p class="eyebrow">05 · Siguientes pasos</p>
+    <h2>Estado y roadmap</h2>
+    <div class="timeline">
+      <div class="tl-item done">
+        <h3>Investigación de mercado y competencia ✓</h3>
+        <p style="color:var(--muted)">Brecha de precios, mapa competitivo y detección de stack tecnológico completados.</p>
+      </div>
+      <div class="tl-item done">
+        <h3>Dos rondas de naming y verificación de dominios ✓</h3>
+        <p style="color:var(--muted)">Candidatos Tier 1 / Tier 2 identificados; descartes documentados.</p>
+      </div>
+      <div class="tl-item">
+        <h3>Selección de nombre y vetting profundo</h3>
+        <p style="color:var(--muted)">Marca registrada, fonética y "feel" sobre el candidato elegido.</p>
+      </div>
+      <div class="tl-item">
+        <h3>Modelo de negocio y go-to-market</h3>
+        <p style="color:var(--muted)">Pasar de investigación a plan de negocio y lanzamiento.</p>
+      </div>
+      <div class="tl-item">
+        <h3>Selección de pasarela de pagos</h3>
+        <p style="color:var(--muted)">Decidir entre las opciones benchmarkeadas según comisión y cobertura.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong style="color:var(--txt)">Proyecto Lentes de Contacto — documento de investigación interno.</strong></p>
+    <p>Terminología clave en uso: omnicanal · DTC · BNPL · headless/SPA · GMV · LTV · pasarela de pagos · base curve · fórmula óptica · Dk/t.</p>
+    <p class="badge">Última actualización: agosto 2026. Cifras basadas en la investigación acumulada del proyecto; verificar precios y comisiones vigentes antes de uso externo.</p>
+  </div>
+</footer>
+
+</body>
+</html>
