@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Proyecto Lentes de Contacto · Investigación</title>
-<meta name="description" content="Resumen de investigación: oportunidad de mercado, competencia, modelo de negocio y marca para un e-commerce de lentes de contacto en Colombia.">
+<meta name="description" content="Resumen de investigación: oportunidad de mercado, competencia, productos de referencia, modelo de negocio y marca para un e-commerce de lentes de contacto en Colombia.">
 <style>
   :root{
     --bg:#0b1020; --bg2:#111832; --card:#151d3a; --line:#26305a;
@@ -31,7 +31,7 @@
   .navlinks{display:flex; gap:22px; flex-wrap:wrap; font-size:.92rem}
   .navlinks a{color:var(--muted)}
   .navlinks a:hover{color:var(--txt); text-decoration:none}
-  @media(max-width:720px){ .navlinks{display:none} }
+  @media(max-width:820px){ .navlinks{display:none} }
 
   /* HERO */
   header.hero{padding:72px 0 40px}
@@ -41,7 +41,7 @@
   .lede{font-size:1.15rem; color:var(--muted); max-width:720px}
   .stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:16px; margin-top:40px}
   .stat{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:20px}
-  .stat .num{font-size:1.9rem; font-weight:800; color:var(--accent)}
+  .stat .num{font-size:1.7rem; font-weight:800; color:var(--accent)}
   .stat .lbl{color:var(--muted); font-size:.9rem; margin-top:4px}
 
   /* SECTIONS */
@@ -79,6 +79,30 @@
   .note{background:rgba(255,180,84,.08); border:1px solid rgba(255,180,84,.35);
     border-radius:12px; padding:14px 16px; color:#f4d9ac; font-size:.9rem}
 
+  /* PRODUCT GALLERY */
+  .gallery{display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin-top:8px}
+  @media(max-width:860px){ .gallery{grid-template-columns:repeat(2,1fr)} }
+  @media(max-width:460px){ .gallery{grid-template-columns:1fr} }
+  .prod{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden;
+    display:flex; flex-direction:column}
+  .prod .imgbox{background:#fff; aspect-ratio:4/3; display:flex; align-items:center; justify-content:center; padding:10px}
+  .prod img{max-width:100%; max-height:100%; object-fit:contain}
+  .prod .meta{padding:14px 16px}
+  .prod .meta h3{font-size:1rem; margin:0 0 4px}
+  .prod .meta p{color:var(--muted); font-size:.85rem; margin:0}
+
+  /* PENDING / PLACEHOLDERS */
+  .ph{background:repeating-linear-gradient(-45deg, rgba(255,180,84,.05) 0 12px, transparent 12px 24px);
+    border:1px dashed rgba(255,180,84,.5); border-radius:var(--radius); padding:20px; position:relative}
+  .ph .badge-ph{display:inline-block; font-size:.7rem; letter-spacing:1px; text-transform:uppercase;
+    color:var(--warn); border:1px solid rgba(255,180,84,.5); border-radius:999px; padding:2px 10px; margin-bottom:10px}
+  .ph h3{color:var(--txt); margin:0 0 6px}
+  .ph p{color:var(--muted); margin:0; font-size:.9rem}
+  .ph .skeleton{height:10px; border-radius:6px; background:linear-gradient(90deg, var(--line), #2f3a6b, var(--line));
+    background-size:200% 100%; animation:sh 1.6s infinite; margin-top:12px}
+  .ph .skeleton.s2{width:80%} .ph .skeleton.s3{width:55%}
+  @keyframes sh{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
   /* TIMELINE */
   .timeline{position:relative; margin-top:10px; padding-left:26px}
   .timeline::before{content:""; position:absolute; left:7px; top:6px; bottom:6px; width:2px; background:var(--line)}
@@ -99,8 +123,10 @@
     <div class="navlinks">
       <a href="#mercado">Mercado</a>
       <a href="#competencia">Competencia</a>
+      <a href="#productos">Productos</a>
       <a href="#modelo">Modelo & Costos</a>
       <a href="#marca">Marca</a>
+      <a href="#pendientes">Pendientes</a>
       <a href="#roadmap">Roadmap</a>
     </div>
   </div>
@@ -109,13 +135,13 @@
 <header class="hero">
   <div class="wrap">
     <span class="kicker">Investigación · E-commerce de lentes de contacto · Colombia</span>
-    <h1>Una brecha de precios estructural en el mercado colombiano de lentes de contacto.</h1>
-    <p class="lede">Resumen de la investigación realizada hasta ahora: la oportunidad de mercado, el mapa competitivo, el modelo de negocio DTC y los costos, y el estado de la marca. Documento de trabajo para revisión.</p>
+    <h1>Un e-commerce DTC de lentes de contacto con marca de valor para Colombia.</h1>
+    <p class="lede">Resumen de la investigación realizada hasta ahora: la oportunidad de mercado, el mapa competitivo, los productos de referencia, el modelo de negocio y costos, y el estado de la marca. Documento de trabajo para revisión.</p>
 
     <div class="stats">
-      <div class="stat"><div class="num">2–2.7×</div><div class="lbl">Precio en Colombia vs. Europa por el mismo producto</div></div>
-      <div class="stat"><div class="num">DTC</div><div class="lbl">Modelo directo al consumidor con marcas de valor</div></div>
+      <div class="stat"><div class="num">DTC</div><div class="lbl">Modelo directo al consumidor con marca de valor</div></div>
       <div class="stat"><div class="num">Online</div><div class="lbl">LentesPlus como principal pure-player; el resto en Shopify</div></div>
+      <div class="stat"><div class="num">Comfortvue</div><div class="lbl">Fabricante de valor para marca propia</div></div>
     </div>
   </div>
 </header>
@@ -126,33 +152,28 @@
     <p class="eyebrow">01 · Oportunidad</p>
     <h2>Oportunidad de mercado</h2>
     <p style="color:var(--muted); max-width:760px">
-      El punto de partida es una <strong style="color:var(--txt)">ineficiencia estructural de precios</strong>: en Colombia
-      los lentes de contacto se venden a aproximadamente <strong style="color:var(--txt)">2 a 2.7 veces</strong> el precio
-      europeo por un producto idéntico. Eso abre espacio para un modelo directo al consumidor (DTC) que traslade parte de
-      ese margen al comprador y aun así opere con rentabilidad sana.
+      La categoría de lentes de contacto en Colombia está dominada por cadenas ópticas omnicanal de precio alto y un único
+      pure-player online. Un modelo <strong style="color:var(--txt)">directo al consumidor (DTC)</strong> con
+      <strong style="color:var(--txt)">marca propia sobre un fabricante de valor</strong> puede ofrecer calidad comparable a
+      un precio más competitivo, sin la carga de costos de una red física.
     </p>
 
     <div class="grid3" style="margin-top:8px">
       <div class="card">
-        <span class="tag">Brecha de precios</span>
-        <h3>2–2.7× más caro</h3>
-        <p>El precio colombiano supera al europeo para el mismo SKU. Benchmarking internacional apoyado en plataformas europeas de comparación de precios.</p>
-      </div>
-      <div class="card">
         <span class="tag">Costo real de uso</span>
         <h3>Costos ocultos recurrentes</h3>
-        <p>El costo mensual real de usar lentes es bastante mayor que el precio de la caja: soluciones, reemplazos y consumibles suman. Es un ángulo de mensaje potente.</p>
+        <p>El costo mensual real de usar lentes es bastante mayor que el precio de la caja: soluciones, reemplazos y consumibles suman. Es un ángulo de mensaje potente para recompra y suscripción.</p>
       </div>
       <div class="card">
         <span class="tag">Palanca de marca</span>
-        <h3>Marcas de valor</h3>
-        <p>Apalancarse en fabricantes como Interojo / Comfortvue permite ofrecer calidad a un precio agresivo bajo marca propia.</p>
+        <h3>Marca de valor</h3>
+        <p>Apalancarse en fabricantes como Interojo / Comfortvue permite ofrecer calidad a un precio competitivo bajo marca propia frente a las marcas premium.</p>
       </div>
-    </div>
-
-    <div class="note" style="margin-top:20px">
-      Nota: las cifras provienen de la investigación previa del proyecto (benchmarking Colombia vs. Europa).
-      Antes de presentar externamente conviene refrescar precios actuales con capturas y links por SKU.
+      <div class="card">
+        <span class="tag">Canal</span>
+        <h3>Online sin red física</h3>
+        <p>Vender directo online evita los costos de la operación omnicanal de los incumbentes, liberando margen para precio y adquisición.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -208,14 +229,45 @@
   </div>
 </section>
 
+<!-- PRODUCTOS -->
+<section id="productos">
+  <div class="wrap">
+    <p class="eyebrow">03 · Referencia</p>
+    <h2>Productos de referencia</h2>
+    <p style="color:var(--muted); max-width:760px">
+      Capturas de catálogo usadas como referencia de categoría y formato de uso. Comfortvue es la referencia clave para la
+      estrategia de marca propia frente a las marcas premium.
+    </p>
+
+    <div class="gallery">
+      <div class="prod">
+        <div class="imgbox"><img src="images/acuvue-oasys.jpeg" alt="Acuvue Oasys con HydraClear Plus"></div>
+        <div class="meta"><h3>Acuvue Oasys</h3><p>Johnson &amp; Johnson · Quincenal · Premium</p></div>
+      </div>
+      <div class="prod">
+        <div class="imgbox"><img src="images/air-optix.jpeg" alt="AIR OPTIX Plus HydraGlyde"></div>
+        <div class="meta"><h3>AIR OPTIX HydraGlyde</h3><p>Alcon · Mensual · Premium</p></div>
+      </div>
+      <div class="prod">
+        <div class="imgbox"><img src="images/soflens-59.jpeg" alt="SofLens 59"></div>
+        <div class="meta"><h3>SofLens 59</h3><p>Bausch &amp; Lomb · Mensual · Media</p></div>
+      </div>
+      <div class="prod">
+        <div class="imgbox"><img src="images/comfortvue-plus.jpeg" alt="Comfortvue Plus Aspheric"></div>
+        <div class="meta"><h3>Comfortvue Plus</h3><p>Interojo · Valor · Marca propia potencial</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- MODELO -->
 <section id="modelo">
   <div class="wrap">
-    <p class="eyebrow">03 · Negocio</p>
+    <p class="eyebrow">04 · Negocio</p>
     <h2>Modelo de negocio y costos</h2>
     <p style="color:var(--muted); max-width:760px">
-      Modelo <strong style="color:var(--txt)">directo al consumidor (DTC)</strong> con marca propia sobre fabricantes de valor,
-      capturando parte de la brecha de precios. El foco está en el margen real después de costos ocultos y comisiones de pago.
+      Modelo <strong style="color:var(--txt)">directo al consumidor (DTC)</strong> con marca propia sobre fabricantes de valor.
+      El foco está en el margen real después de costos ocultos y comisiones de pago.
     </p>
 
     <div class="grid2" style="margin-top:8px">
@@ -223,7 +275,6 @@
         <h3>Palancas de margen</h3>
         <ul class="clean">
           <li>Compra a fabricante de valor (Interojo / Comfortvue) bajo marca propia</li>
-          <li>Traslado parcial de la brecha 2–2.7× al precio de venta</li>
           <li>Venta online sin costos de red física omnicanal</li>
           <li>Mensaje del "costo real mensual" para justificar recompra y suscripción</li>
         </ul>
@@ -241,7 +292,7 @@
     </div>
 
     <h3 style="margin-top:28px">Pasarelas de pago evaluadas</h3>
-    <p style="color:var(--muted)">Se hizo un benchmark de opciones para el mercado colombiano. Las comisiones exactas deben confirmarse con cada proveedor antes de decidir.</p>
+    <p style="color:var(--muted)">Benchmark inicial de opciones para el mercado colombiano. Las comisiones exactas deben confirmarse con cada proveedor (ver Pendientes).</p>
     <table>
       <thead><tr><th>Pasarela</th><th>Enfoque</th><th>Estado</th></tr></thead>
       <tbody>
@@ -253,16 +304,13 @@
         <tr><td>Stripe</td><td>Internacional</td><td class="badge">Benchmarkeada</td></tr>
       </tbody>
     </table>
-    <div class="note" style="margin-top:16px">
-      Pendiente: cargar la tabla con las tasas de comisión aproximadas por transacción de cada pasarela (dato ya levantado en la investigación, conviene verificarlo a la fecha actual antes de mostrarlo).
-    </div>
   </div>
 </section>
 
 <!-- MARCA -->
 <section id="marca">
   <div class="wrap">
-    <p class="eyebrow">04 · Identidad</p>
+    <p class="eyebrow">05 · Identidad</p>
     <h2>Marca</h2>
     <p style="color:var(--muted); max-width:760px">
       Se completaron dos rondas de investigación y verificación de nombres, revisando disponibilidad de dominio en
@@ -293,19 +341,73 @@
   </div>
 </section>
 
+<!-- PENDIENTES / PLACEHOLDERS -->
+<section id="pendientes">
+  <div class="wrap">
+    <p class="eyebrow">06 · Por investigar</p>
+    <h2>Pendientes de investigación</h2>
+    <p style="color:var(--muted); max-width:760px">
+      Espacios reservados para los datos que aún faltan por levantar. Se completarán con cifras y fuentes verificables.
+    </p>
+
+    <div class="grid3" style="margin-top:8px">
+      <div class="ph">
+        <span class="badge-ph">Pendiente</span>
+        <h3>Precios locales por SKU</h3>
+        <p>Precios actuales en Colombia (LentesPlus, GMO, Lafam) con captura y link por producto.</p>
+        <div class="skeleton"></div><div class="skeleton s2"></div><div class="skeleton s3"></div>
+      </div>
+      <div class="ph">
+        <span class="badge-ph">Pendiente</span>
+        <h3>Comisiones de pasarelas</h3>
+        <p>Tasa por transacción vigente de cada pasarela, más costos fijos y de retiro.</p>
+        <div class="skeleton"></div><div class="skeleton s2"></div><div class="skeleton s3"></div>
+      </div>
+      <div class="ph">
+        <span class="badge-ph">Pendiente</span>
+        <h3>Costo de producto</h3>
+        <p>Precio de compra por caja Comfortvue/Interojo, mínimos de pedido, tiempos e Incoterms.</p>
+        <div class="skeleton"></div><div class="skeleton s2"></div><div class="skeleton s3"></div>
+      </div>
+      <div class="ph">
+        <span class="badge-ph">Pendiente</span>
+        <h3>Logística y última milla</h3>
+        <p>Tarifas de couriers en Colombia, cobertura y costo de devoluciones.</p>
+        <div class="skeleton"></div><div class="skeleton s2"></div><div class="skeleton s3"></div>
+      </div>
+      <div class="ph">
+        <span class="badge-ph">Pendiente</span>
+        <h3>Aranceles e importación</h3>
+        <p>Clasificación arancelaria y regulación sanitaria (INVIMA) aplicable.</p>
+        <div class="skeleton"></div><div class="skeleton s2"></div><div class="skeleton s3"></div>
+      </div>
+      <div class="ph">
+        <span class="badge-ph">Pendiente</span>
+        <h3>Modelo financiero</h3>
+        <p>P&amp;L unitario, CAC vs LTV, punto de equilibrio y escenarios de suscripción.</p>
+        <div class="skeleton"></div><div class="skeleton s2"></div><div class="skeleton s3"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ROADMAP -->
 <section id="roadmap">
   <div class="wrap">
-    <p class="eyebrow">05 · Siguientes pasos</p>
+    <p class="eyebrow">07 · Siguientes pasos</p>
     <h2>Estado y roadmap</h2>
     <div class="timeline">
       <div class="tl-item done">
         <h3>Investigación de mercado y competencia ✓</h3>
-        <p style="color:var(--muted)">Brecha de precios, mapa competitivo y detección de stack tecnológico completados.</p>
+        <p style="color:var(--muted)">Mapa competitivo y detección de stack tecnológico completados.</p>
       </div>
       <div class="tl-item done">
         <h3>Dos rondas de naming y verificación de dominios ✓</h3>
         <p style="color:var(--muted)">Candidatos Tier 1 / Tier 2 identificados; descartes documentados.</p>
+      </div>
+      <div class="tl-item">
+        <h3>Levantamiento de precios y costos locales</h3>
+        <p style="color:var(--muted)">Precios por SKU, comisiones, costo de producto y logística (ver Pendientes).</p>
       </div>
       <div class="tl-item">
         <h3>Selección de nombre y vetting profundo</h3>
@@ -315,10 +417,6 @@
         <h3>Modelo de negocio y go-to-market</h3>
         <p style="color:var(--muted)">Pasar de investigación a plan de negocio y lanzamiento.</p>
       </div>
-      <div class="tl-item">
-        <h3>Selección de pasarela de pagos</h3>
-        <p style="color:var(--muted)">Decidir entre las opciones benchmarkeadas según comisión y cobertura.</p>
-      </div>
     </div>
   </div>
 </section>
@@ -327,7 +425,7 @@
   <div class="wrap">
     <p><strong style="color:var(--txt)">Proyecto Lentes de Contacto — documento de investigación interno.</strong></p>
     <p>Terminología clave en uso: omnicanal · DTC · BNPL · headless/SPA · GMV · LTV · pasarela de pagos · base curve · fórmula óptica · Dk/t.</p>
-    <p class="badge">Última actualización: agosto 2026. Cifras basadas en la investigación acumulada del proyecto; verificar precios y comisiones vigentes antes de uso externo.</p>
+    <p class="badge">Última actualización: agosto 2026. Documento de trabajo; los datos marcados como pendientes se completarán con fuentes verificables.</p>
   </div>
 </footer>
 
