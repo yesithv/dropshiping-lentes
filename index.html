@@ -1,119 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Proyecto Lentes de Contacto · Investigación</title>
-<meta name="description" content="Resumen de investigación: oportunidad de mercado, competencia, productos de referencia, modelo de negocio y marca para un e-commerce de lentes de contacto en Colombia.">
-<style>
-  :root{
-    --bg:#0b1020; --bg2:#111832; --card:#151d3a; --line:#26305a;
-    --txt:#e9edf7; --muted:#a3adcc; --accent:#5b8cff; --accent2:#22d3a6;
-    --warn:#ffb454; --radius:16px; --maxw:1080px;
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{
-    margin:0; background:radial-gradient(1200px 600px at 80% -10%, #1a2450 0%, var(--bg) 55%) fixed, var(--bg);
-    color:var(--txt); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    line-height:1.65; -webkit-font-smoothing:antialiased;
-  }
-  a{color:var(--accent); text-decoration:none}
-  a:hover{text-decoration:underline}
-  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 20px}
-
-  /* NAV */
-  nav{position:sticky; top:0; z-index:20; backdrop-filter:blur(10px);
-    background:rgba(11,16,32,.72); border-bottom:1px solid var(--line)}
-  nav .wrap{display:flex; align-items:center; justify-content:space-between; height:60px; gap:16px}
-  .brand{font-weight:700; letter-spacing:.3px}
-  .brand span{color:var(--accent)}
-  .navlinks{display:flex; gap:22px; flex-wrap:wrap; font-size:.92rem}
-  .navlinks a{color:var(--muted)}
-  .navlinks a:hover{color:var(--txt); text-decoration:none}
-  @media(max-width:820px){ .navlinks{display:none} }
-
-  /* HERO */
-  header.hero{padding:72px 0 40px}
-  .kicker{display:inline-block; font-size:.8rem; letter-spacing:2px; text-transform:uppercase;
-    color:var(--accent2); border:1px solid var(--line); padding:6px 12px; border-radius:999px; margin-bottom:22px}
-  h1{font-size:clamp(2rem,5vw,3.2rem); line-height:1.1; margin:.2em 0 .3em; font-weight:800}
-  .lede{font-size:1.15rem; color:var(--muted); max-width:720px}
-  .stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:16px; margin-top:40px}
-  .stat{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:20px}
-  .stat .num{font-size:1.7rem; font-weight:800; color:var(--accent)}
-  .stat .lbl{color:var(--muted); font-size:.9rem; margin-top:4px}
-
-  /* SECTIONS */
-  section{padding:52px 0; border-top:1px solid var(--line)}
-  .eyebrow{font-size:.8rem; letter-spacing:2px; text-transform:uppercase; color:var(--accent2); margin:0 0 6px}
-  h2{font-size:clamp(1.5rem,3.5vw,2.1rem); margin:0 0 18px; font-weight:800}
-  h3{font-size:1.15rem; margin:0 0 8px}
-  p{margin:0 0 14px}
-  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:20px}
-  .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:20px}
-  @media(max-width:760px){ .grid2,.grid3{grid-template-columns:1fr} }
-  .card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:22px}
-  .card h3{color:var(--txt)}
-  .card p{color:var(--muted); margin-bottom:0}
-  .tag{display:inline-block; font-size:.75rem; color:var(--accent2); border:1px solid var(--line);
-    padding:2px 10px; border-radius:999px; margin-bottom:10px}
-
-  table{width:100%; border-collapse:collapse; background:var(--card);
-    border:1px solid var(--line); border-radius:var(--radius); overflow:hidden}
-  th,td{padding:12px 14px; text-align:left; border-bottom:1px solid var(--line); font-size:.95rem}
-  th{background:var(--bg2); color:var(--txt); font-weight:700}
-  td{color:var(--muted)}
-  tr:last-child td{border-bottom:none}
-
-  .pill{display:inline-block; padding:3px 10px; border-radius:999px; font-size:.78rem; font-weight:600}
-  .p-t1{background:rgba(34,211,166,.15); color:var(--accent2)}
-  .p-t2{background:rgba(91,140,255,.15); color:var(--accent)}
-  .p-out{background:rgba(255,180,84,.15); color:var(--warn)}
-
-  ul.clean{list-style:none; padding:0; margin:0}
-  ul.clean li{padding:10px 0 10px 28px; position:relative; color:var(--muted); border-bottom:1px solid var(--line)}
-  ul.clean li:last-child{border-bottom:none}
-  ul.clean li::before{content:"→"; position:absolute; left:0; color:var(--accent)}
-
-  .note{background:rgba(255,180,84,.08); border:1px solid rgba(255,180,84,.35);
-    border-radius:12px; padding:14px 16px; color:#f4d9ac; font-size:.9rem}
-
-  /* PRODUCT GALLERY */
-  .gallery{display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin-top:8px}
-  @media(max-width:860px){ .gallery{grid-template-columns:repeat(2,1fr)} }
-  @media(max-width:460px){ .gallery{grid-template-columns:1fr} }
-  .prod{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden;
-    display:flex; flex-direction:column}
-  .prod .imgbox{background:#fff; aspect-ratio:4/3; display:flex; align-items:center; justify-content:center; padding:10px}
-  .prod img{max-width:100%; max-height:100%; object-fit:contain}
-  .prod .meta{padding:14px 16px}
-  .prod .meta h3{font-size:1rem; margin:0 0 4px}
-  .prod .meta p{color:var(--muted); font-size:.85rem; margin:0}
-
-  /* PENDING / PLACEHOLDERS */
-  .ph{background:repeating-linear-gradient(-45deg, rgba(255,180,84,.05) 0 12px, transparent 12px 24px);
-    border:1px dashed rgba(255,180,84,.5); border-radius:var(--radius); padding:20px; position:relative}
-  .ph .badge-ph{display:inline-block; font-size:.7rem; letter-spacing:1px; text-transform:uppercase;
-    color:var(--warn); border:1px solid rgba(255,180,84,.5); border-radius:999px; padding:2px 10px; margin-bottom:10px}
-  .ph h3{color:var(--txt); margin:0 0 6px}
-  .ph p{color:var(--muted); margin:0; font-size:.9rem}
-  .ph .skeleton{height:10px; border-radius:6px; background:linear-gradient(90deg, var(--line), #2f3a6b, var(--line));
-    background-size:200% 100%; animation:sh 1.6s infinite; margin-top:12px}
-  .ph .skeleton.s2{width:80%} .ph .skeleton.s3{width:55%}
-  @keyframes sh{0%{background-position:200% 0}100%{background-position:-200% 0}}
-
-  /* TIMELINE */
-  .timeline{position:relative; margin-top:10px; padding-left:26px}
-  .timeline::before{content:""; position:absolute; left:7px; top:6px; bottom:6px; width:2px; background:var(--line)}
-  .tl-item{position:relative; padding:0 0 22px 6px}
-  .tl-item::before{content:""; position:absolute; left:-24px; top:6px; width:12px; height:12px;
-    border-radius:50%; background:var(--accent); box-shadow:0 0 0 4px rgba(91,140,255,.15)}
-  .tl-item.done::before{background:var(--accent2); box-shadow:0 0 0 4px rgba(34,211,166,.15)}
-
-  footer{padding:40px 0 60px; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem}
-  .badge{font-size:.78rem; color:var(--muted)}
-</style>
+<title>Proyecto Lentes de Contacto · Análisis de Viabilidad</title>
+<meta name="description" content="Investigación de mercado y análisis de viabilidad independiente: oportunidad, competencia con precios reales, comisiones, logística y umbral de margen para un dropshipping de lentes de contacto en Colombia.">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -125,6 +17,7 @@
       <a href="#competencia">Competencia</a>
       <a href="#productos">Productos</a>
       <a href="#modelo">Modelo & Costos</a>
+      <a href="#viabilidad">Viabilidad</a>
       <a href="#marca">Marca</a>
       <a href="#pendientes">Pendientes</a>
       <a href="#roadmap">Roadmap</a>
@@ -134,14 +27,13 @@
 
 <header class="hero">
   <div class="wrap">
-    <span class="kicker">Investigación · E-commerce de lentes de contacto · Colombia</span>
-    <h1>Un e-commerce DTC de lentes de contacto con marca de valor para Colombia.</h1>
-    <p class="lede">Resumen de la investigación realizada hasta ahora: la oportunidad de mercado, el mapa competitivo, los productos de referencia, el modelo de negocio y costos, y el estado de la marca. Documento de trabajo para revisión.</p>
+    <span class="kicker">Investigación + auditoría independiente · Dropshipping de lentes de contacto · Colombia</span>
+    <h1>Dropshipping DTC de lentes de contacto: la tesis es real, pero la viabilidad depende de un dato que aún no tenemos.</h1>
+    <p class="lede">Este documento combina la investigación original (<code>INVESTIGACION.md</code>) con un análisis de viabilidad independiente (<code>ANALISIS-VIABILIDAD.md</code>) que la audita y contrasta con precios de mercado reales y comisiones/logística verificadas. Conclusión: <strong style="color:#fff">no se puede confirmar la viabilidad todavía</strong> — falta el costo real de compra al proveedor.</p>
 
     <div class="stats">
-      <div class="stat"><div class="num">DTC</div><div class="lbl">Modelo directo al consumidor con marca de valor</div></div>
-      <div class="stat"><div class="num">Online</div><div class="lbl">LentesPlus como principal pure-player; el resto en Shopify</div></div>
-      <div class="stat"><div class="num">Comfortvue</div><div class="lbl">Fabricante de valor para marca propia</div></div>
+      <div class="stat"><div class="num">$90k–162k</div><div class="lbl">Rango de precio observado de Comfortvue en ópticas colombianas (caja x6)</div></div>
+      <div class="stat"><div class="num">$36k–80k</div><div class="lbl">Umbral de costo de proveedor para margen ≥35% según precios de mercado observados</div></div>
     </div>
   </div>
 </header>
@@ -149,14 +41,22 @@
 <!-- MERCADO -->
 <section id="mercado">
   <div class="wrap">
-    <p class="eyebrow">01 · Oportunidad</p>
+    <p class="eyebrow"><span class="eyebrow-num">01</span><span class="eyebrow-label">Oportunidad</span></p>
     <h2>Oportunidad de mercado</h2>
     <p style="color:var(--muted); max-width:760px">
-      La categoría de lentes de contacto en Colombia está dominada por cadenas ópticas omnicanal de precio alto y un único
-      pure-player online. Un modelo <strong style="color:var(--txt)">directo al consumidor (DTC)</strong> con
-      <strong style="color:var(--txt)">marca propia sobre un fabricante de valor</strong> puede ofrecer calidad comparable a
-      un precio más competitivo, sin la carga de costos de una red física.
+      La categoría de lentes de contacto en Colombia está dominada por cadenas ópticas omnicanal de precio alto, un único
+      pure-player online bien financiado, y ya tiene presencia en retail masivo (Farmatodo) — señal de commoditización, no
+      de un nicho exclusivo de ópticas especializadas. Existe una brecha de precio real y verificada entre la categoría premium
+      (<strong style="color:var(--txt)">Acuvue Oasys y AIR OPTIX Plus HydraGlyde, ~$220.000–$295.000 COP</strong> caja x6) y la
+      categoría de valor (<strong style="color:var(--txt)">Comfortvue ~$90.000–$161.500 COP</strong> caja x6) — la palanca de
+      "marca de valor" sí existe como categoría. Pero esa brecha no es tan limpia como parece: el precio máximo observado de
+      Comfortvue ($161.500) ya <strong style="color:var(--txt)">supera el máximo de SofLens 59</strong> (~$145.000 COP, categoría
+      media) — el producto de "valor" no siempre es más barato que uno de gama media. El problema no es la tesis: es que ese
+      mismo producto <strong style="color:var(--txt)">ya se vende directamente al público colombiano por varios canales
+      establecidos</strong> (ver Competencia), lo que reduce la ventaja de un dropshipping nuevo sin diferenciación o
+      exclusividad confirmada.
     </p>
+    <span class="src-tag src-ver">Verificado — rangos de precio por segmento, agosto 2026</span><span class="src-tag src-pend">Costo real de proveedor: pendiente</span>
 
     <div class="grid3" style="margin-top:8px">
       <div class="card">
@@ -181,11 +81,12 @@
 <!-- COMPETENCIA -->
 <section id="competencia">
   <div class="wrap">
-    <p class="eyebrow">02 · Panorama</p>
+    <p class="eyebrow"><span class="eyebrow-num">02</span><span class="eyebrow-label">Panorama</span></p>
     <h2>Competencia</h2>
     <p style="color:var(--muted); max-width:760px">
       El mercado está dominado por incumbentes omnicanal fuertes, con un único pure-player online relevante y bien financiado.
-      La mayoría de los demás jugadores corren sobre Shopify, lo que da pistas sobre su nivel de sofisticación técnica.
+      La mayoría de los demás jugadores corren sobre Shopify. Además, la categoría ya tiene presencia en retail masivo (Farmatodo),
+      lo que confirma commoditización y distribución generalista — no exclusiva de ópticas especializadas.
     </p>
 
     <table style="margin-top:8px">
@@ -196,65 +97,168 @@
         <tr>
           <td><strong style="color:var(--txt)">GMO / EssilorLuxottica</strong></td>
           <td>Incumbente omnicanal</td>
-          <td>Uno de los dos dominantes; respaldo del grupo óptico global más grande.</td>
+          <td>Uno de los dos dominantes; respaldo del grupo óptico global más grande. Acuvue Oasys verificado: obliga compra mínima de 2 cajas, $280.000 c/u ($560.000 total); envío gratis en Cundinamarca y Santander, entrega en 7 días hábiles. <a href="https://gmo.com.co/products/acuvue-oasys" target="_blank" rel="noopener">Ver producto</a>.</td>
         </tr>
         <tr>
           <td><strong style="color:var(--txt)">Lafam / GrandVision</strong></td>
           <td>Incumbente omnicanal</td>
-          <td>Cadena óptica con fuerte presencia física y respaldo internacional.</td>
+          <td>Cadena óptica con fuerte presencia física y respaldo internacional. Acuvue Oasys verificado: $280.000; domicilio gratis, entrega en 5–10 días. AIR OPTIX Plus HydraGlyde verificado: $295.000 (precio máximo observado para ese producto).</td>
         </tr>
         <tr>
           <td><strong style="color:var(--txt)"><a href="https://www.lentesplus.com/co/" target="_blank" rel="noopener">LentesPlus</a></strong></td>
           <td>Pure-player online líder</td>
-          <td>Bien financiado. Arquitectura headless (React SPA), lo que dificulta extraer sus precios por fetch directo.</td>
+          <td>Bien financiado. Arquitectura headless (React SPA). Acuvue Oasys verificado: $280.000, acumulación de puntos (~1,8%) y obsequio por 2 cajas; envío gratis en Bogotá y Bucaramanga. AIR OPTIX Plus HydraGlyde verificado: $280.000. SofLens 59 verificado: $110.000 — <strong style="color:var(--txt)">precio más bajo observado para SofLens 59 en todos los canales</strong>. <a href="https://www.lentesplus.com/co/producto/acuvue-oasys" target="_blank" rel="noopener">Ver Acuvue</a>.</td>
         </tr>
         <tr>
-          <td><strong style="color:var(--txt)">Otros retailers</strong></td>
-          <td>Long tail</td>
-          <td>Mayoría sobre Shopify (patrones de URL /collections/ y /products/ lo delatan).</td>
+          <td><strong style="color:var(--txt)"><a href="https://opticentro.co/collections/lentes-de-contacto-1/products/acuvue%C2%AE-oasys%C2%AE-con-hydraclear%C2%AE-plus" target="_blank" rel="noopener">Opticentro</a></strong></td>
+          <td>Óptica online</td>
+          <td>Acuvue Oasys verificado: $229.500 (promo) / $270.000 (regular). AIR OPTIX Plus HydraGlyde verificado: $250.750 (promo) / $295.000 (regular) — <strong style="color:var(--txt)">precio mínimo observado para AIR OPTIX</strong>. Exige subir fórmula óptica; no permite login con redes sociales. Envío gratis Bogotá, $13.500 Bucaramanga.</td>
+        </tr>
+        <tr>
+          <td><strong style="color:var(--txt)">Ópticas independientes</strong></td>
+          <td>Competencia directa (Comfortvue + SofLens 59)</td>
+          <td><strong>Comfortvue Plus verificado (agosto 2026):</strong> <a href="https://www.vistaoptica.com.co/lentes-de-contacto-comfortvue-caja-x6-unidades" target="_blank" rel="noopener">Vista Óptica</a> $161.500 &nbsp;·&nbsp; <a href="https://opticaretinos.com/producto/comfortvue-x6/" target="_blank" rel="noopener">Óptica Retinos</a> $130.000 &nbsp;·&nbsp; <a href="https://opticavisionnatural.com/products/comfortvue-lcontac0058" target="_blank" rel="noopener">Óptica Visión Natural</a> $90.000 (mínimo observado). Rango real: $90.000–$161.500. Óptica Moderna y Óptica Iris listan Comfortvue sin precio confirmado.
+          <br>Óptica Visión Natural también vende Acuvue Oasys a $220.000 (mínimo observado en todos los canales), sin obligación de iniciar sesión, envío gratis &gt;$100.000 (Cundinamarca, Santander, Boyacá).
+          <br><strong>SofLens 59 verificado:</strong> Vista Óptica $145.000 (regular, máximo observado) · Lentcenter $120.000 · Confort Center $135.000 · Tienda Óptica $140.000.</td>
+        </tr>
+        <tr>
+          <td><strong style="color:var(--txt)"><a href="https://www.farmatodo.com.co/producto/233800025-lentes-de-contacto" target="_blank" rel="noopener">Farmatodo</a></strong></td>
+          <td>Retail masivo (farmacia/droguería)</td>
+          <td>SofLens 59 verificado: $124.950. Canal no especializado — señal de que la categoría de lentes de contacto ya tiene distribución generalista en Colombia, no exclusiva de ópticas.</td>
         </tr>
       </tbody>
     </table>
 
-    <div class="grid2" style="margin-top:20px">
-      <div class="card">
-        <h3>Lectura técnica</h3>
-        <p>URLs /collections/ y /products/ señalan Shopify de forma fiable; dependencia de JS sin SSR señala arquitectura headless/SPA. LentesPlus (SPA) obliga a triangular precios vía agregadores de cupones y fuentes de terceros.</p>
-      </div>
-      <div class="card">
-        <h3>Hueco competitivo</h3>
-        <p>Los incumbentes son omnicanal y caros; el pure-player líder está bien posicionado pero no compite en precio agresivo con marca de valor. Ahí está el espacio DTC.</p>
-      </div>
-    </div>
+    <span class="src-tag src-ver">Verificado — precios activos en tiendas, agosto 2026 (Acuvue, AIR OPTIX, SofLens 59, Comfortvue Plus)</span>
+    <span class="src-tag src-pend">Exclusividad de importación Comfortvue: pendiente</span>
   </div>
 </section>
 
 <!-- PRODUCTOS -->
 <section id="productos">
   <div class="wrap">
-    <p class="eyebrow">03 · Referencia</p>
+    <p class="eyebrow"><span class="eyebrow-num">03</span><span class="eyebrow-label">Referencia</span></p>
     <h2>Productos de referencia</h2>
     <p style="color:var(--muted); max-width:760px">
-      Capturas de catálogo usadas como referencia de categoría y formato de uso. Comfortvue es la referencia clave para la
-      estrategia de marca propia frente a las marcas premium.
+      Precios verificados de los 4 productos de referencia en distintas tiendas colombianas. Todos los productos tienen al menos un precio confirmado.
     </p>
+    <div class="table-scroll">
+    <table style="margin-top:8px">
+      <thead><tr><th class="col-prod">Producto</th><th class="col-tienda">Tienda</th><th>Precio observado</th><th>Días de entrega</th><th>Domicilio</th><th>Comentario</th></tr></thead>
+      <tbody>
+        <tr><td rowspan="5" class="col-prod"><img src="images/acuvue-oasys.jpeg" alt="Acuvue Oasys" class="prod-thumb"><strong style="color:var(--txt)">Acuvue Oasys</strong><br><span style="font-size:.8rem">Premium</span></td>
+          <td class="col-tienda"><a href="https://www.lafam.com.co/products/tienda-online-acuvue-oasys" target="_blank" rel="noopener">Ópticas Lafam</a></td>
+          <td>$280.000 <span class="badge-max">↑ max</span></td>
+          <td>5–10 días</td>
+          <td>Gratis</td>
+          <td>—</td></tr>
+        <tr><td class="col-tienda"><a href="https://opticavisionnatural.com/products/acuvue-oasyslcontac0052" target="_blank" rel="noopener">Óptica Visión Natural</a></td>
+          <td>$220.000 <span class="badge-min">↓ min</span></td>
+          <td>2–7 días hábiles</td>
+          <td>Gratis en compras &gt; $100.000 (Cundinamarca, Santander, Boyacá)</td>
+          <td>No exige iniciar sesión</td></tr>
+        <tr><td class="col-tienda"><a href="https://opticentro.co/collections/lentes-de-contacto-1/products/acuvue%C2%AE-oasys%C2%AE-con-hydraclear%C2%AE-plus" target="_blank" rel="noopener">Opticentro</a></td>
+          <td>$229.500 (promo) / $270.000 (regular)</td>
+          <td>—</td>
+          <td>Gratis en Bogotá · $13.500 en Bucaramanga</td>
+          <td>Exige subir fórmula óptica; no permite iniciar sesión con redes sociales</td></tr>
+        <tr><td class="col-tienda"><a href="https://www.lentesplus.com/co/producto/acuvue-oasys" target="_blank" rel="noopener">LentesPlus</a></td>
+          <td>$280.000 <span class="badge-max">↑ max</span></td>
+          <td>4–11 días (Bucaramanga)</td>
+          <td>Gratis en Bogotá y Bucaramanga</td>
+          <td>Acumula 8.400 puntos (&#x2248;$5.040 en próxima compra); obsequio Renu Advanced 355 ml por 2 cajas; requiere iniciar sesión (permite redes sociales)</td></tr>
+        <tr><td class="col-tienda"><a href="https://gmo.com.co/products/acuvue-oasys" target="_blank" rel="noopener">GMO</a></td>
+          <td>$560.000 (2 cajas, $280.000 c/u)</td>
+          <td>7 días hábiles</td>
+          <td>Gratis (Cundinamarca, Santander)</td>
+          <td>Obliga a comprar 2 cajas</td></tr>
 
-    <div class="gallery">
-      <div class="prod">
-        <div class="imgbox"><img src="images/acuvue-oasys.jpeg" alt="Acuvue Oasys con HydraClear Plus"></div>
-        <div class="meta"><h3>Acuvue Oasys</h3><p>Johnson &amp; Johnson · Quincenal · Premium</p></div>
+        <tr><td rowspan="3" class="col-prod"><img src="images/air-optix.jpeg" alt="AIR OPTIX Plus HydraGlyde" class="prod-thumb"><strong style="color:var(--txt)">AIR OPTIX Plus HydraGlyde</strong><br><span style="font-size:.8rem">Premium</span></td>
+          <td class="col-tienda"><a href="https://www.lentesplus.com/co/producto/air-optix-plus-hydraglyde" target="_blank" rel="noopener">LentesPlus</a></td>
+          <td>$280.000</td>
+          <td>4–11 días (Bucaramanga)</td>
+          <td>Gratis en Bogotá y Bucaramanga</td>
+          <td>Acumula 8.408 puntos (&#x2248;$5.045 en próxima compra)</td></tr>
+        <tr><td class="col-tienda"><a href="https://www.lafam.com.co/products/tienda-online-airoptix-plus-hydraglyde" target="_blank" rel="noopener">Ópticas Lafam</a></td>
+          <td>$295.000 <span class="badge-max">↑ max</span></td>
+          <td>7 días hábiles</td>
+          <td>Gratis</td>
+          <td>—</td></tr>
+        <tr><td class="col-tienda"><a href="https://opticentro.co/products/air-optix-plus-hydraglyde" target="_blank" rel="noopener">Opticentro</a></td>
+          <td>$250.750 <span class="badge-min">↓ min</span> / $295.000 (regular)</td>
+          <td>—</td>
+          <td>Gratis en Bogotá · $13.500 en Bucaramanga</td>
+          <td>Exige subir fórmula óptica; no permite iniciar sesión con redes sociales</td></tr>
+
+        <tr><td rowspan="6" class="col-prod"><img src="images/soflens-59.jpeg" alt="SofLens 59" class="prod-thumb"><strong style="color:var(--txt)">SofLens 59</strong><br><span style="font-size:.8rem">Media</span></td>
+          <td class="col-tienda"><a href="https://www.lentesplus.com/co/producto/soflens-59" target="_blank" rel="noopener">LentesPlus</a></td>
+          <td>$110.000 <span class="badge-min">↓ min</span></td>
+          <td>4–11 días (Bucaramanga)</td>
+          <td>Gratis en Bogotá y Bucaramanga</td>
+          <td>Acumula 3.300 puntos (&#x2248;$1.980 en próxima compra)</td></tr>
+        <tr><td class="col-tienda"><a href="https://www.farmatodo.com.co/producto/233800025-lentes-de-contacto" target="_blank" rel="noopener">Farmatodo</a></td>
+          <td>$124.950</td>
+          <td>Bogotá 3–24 h · otras ciudades 5–7 días</td>
+          <td>—</td>
+          <td>—</td></tr>
+        <tr><td class="col-tienda"><a href="https://www.vistaoptica.com.co/lentes-de-contacto-soflens-59-bausch-lomb" target="_blank" rel="noopener">Vista Óptica</a></td>
+          <td>$123.250 (desc. Addi/Sistecrédito) / $145.000 <span class="badge-max">↑ max</span> (regular)</td>
+          <td>—</td>
+          <td>Envíos a toda Colombia</td>
+          <td>10% de descuento pagando con Addi o Sistecrédito</td></tr>
+        <tr><td class="col-tienda"><a href="https://www.opticalentcenter.co/producto/soflens-59/" target="_blank" rel="noopener">Óptica Lentcenter</a></td>
+          <td>$120.000</td>
+          <td>—</td>
+          <td>$17.000 a toda Colombia</td>
+          <td>Paga con Addi hasta 6 cuotas</td></tr>
+        <tr><td class="col-tienda"><a href="https://opticaconfortcenter.com/products/soflens-59" target="_blank" rel="noopener">Óptica Confort Center</a></td>
+          <td>$135.000</td>
+          <td>—</td>
+          <td>Gratis a toda Colombia</td>
+          <td>—</td></tr>
+        <tr><td class="col-tienda"><a href="https://www.tiendaoptica.com/products/lentes-de-contacto-soflens" target="_blank" rel="noopener">Tienda Óptica</a></td>
+          <td>$140.000</td>
+          <td>—</td>
+          <td>$21.000 a toda Colombia</td>
+          <td>—</td></tr>
+
+        <tr><td rowspan="3" class="col-prod"><img src="images/comfortvue-plus.jpeg" alt="Comfortvue Plus" class="prod-thumb"><strong style="color:var(--txt)">Comfortvue Plus</strong><br><span style="font-size:.8rem">Valor</span></td>
+          <td class="col-tienda"><a href="https://www.vistaoptica.com.co/lentes-de-contacto-comfortvue-caja-x6-unidades" target="_blank" rel="noopener">Vista Óptica</a></td>
+          <td>$161.500 <span class="badge-max">↑ max</span> (desc. 10% con Addi/Sistecrédito → $145.350)</td>
+          <td>—</td>
+          <td>Envíos a toda Colombia</td>
+          <td>10% de descuento pagando con Addi o Sistecrédito</td></tr>
+        <tr><td class="col-tienda"><a href="https://opticaretinos.com/producto/comfortvue-x6/" target="_blank" rel="noopener">Óptica Retinos</a></td>
+          <td>$130.000</td>
+          <td>—</td>
+          <td>Envío gratis</td>
+          <td>—</td></tr>
+        <tr><td class="col-tienda"><a href="https://opticavisionnatural.com/products/comfortvue-lcontac0058" target="_blank" rel="noopener">Óptica Visión Natural</a></td>
+          <td>$90.000 <span class="badge-min">↓ min</span></td>
+          <td>2–7 días hábiles</td>
+          <td>No aplica envío gratis (compra &lt; umbral $100.000)</td>
+          <td>Envío gratis aplica solo en compras &gt; $100.000 (Cundinamarca, Santander, Boyacá)</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <span class="src-tag src-ver">Verificado — Acuvue Oasys (5 tiendas), AIR OPTIX Plus HydraGlyde (3 tiendas), SofLens 59 (6 tiendas) y Comfortvue Plus (3 tiendas)</span>
+
+    <h3 style="margin-top:28px">Páginas oficiales del fabricante</h3>
+    <div class="grid3" style="margin-top:8px">
+      <div class="card">
+        <span class="tag">Alcon</span>
+        <h3>AIR OPTIX Plus HydraGlyde</h3>
+        <p><a href="https://www.myalcon.com/co/contact-lenses/monthly/air-optix-plus-hydraglyde/" target="_blank" rel="noopener">myalcon.com/co</a></p>
       </div>
-      <div class="prod">
-        <div class="imgbox"><img src="images/air-optix.jpeg" alt="AIR OPTIX Plus HydraGlyde"></div>
-        <div class="meta"><h3>AIR OPTIX HydraGlyde</h3><p>Alcon · Mensual · Premium</p></div>
+      <div class="card">
+        <span class="tag">Bausch + Lomb</span>
+        <h3>SofLens 59</h3>
+        <p><a href="https://www.bausch.com.es/productos/lentes-de-contacto/miopia-o-hipermetropia/soflensr-59/" target="_blank" rel="noopener">bausch.com.es</a></p>
       </div>
-      <div class="prod">
-        <div class="imgbox"><img src="images/soflens-59.jpeg" alt="SofLens 59"></div>
-        <div class="meta"><h3>SofLens 59</h3><p>Bausch &amp; Lomb · Mensual · Media</p></div>
-      </div>
-      <div class="prod">
-        <div class="imgbox"><img src="images/comfortvue-plus.jpeg" alt="Comfortvue Plus Aspheric"></div>
-        <div class="meta"><h3>Comfortvue Plus</h3><p>Interojo · Valor · Marca propia potencial</p></div>
+      <div class="card">
+        <span class="tag" style="color:var(--warn); border-color:rgba(255,180,84,.4)">Pendiente</span>
+        <h3>Acuvue Oasys (J&amp;J) · Comfortvue Plus (Interojo)</h3>
+        <p style="color:var(--muted)">URLs de páginas oficiales aún no levantadas.</p>
       </div>
     </div>
   </div>
@@ -263,7 +267,7 @@
 <!-- MODELO -->
 <section id="modelo">
   <div class="wrap">
-    <p class="eyebrow">04 · Negocio</p>
+    <p class="eyebrow"><span class="eyebrow-num">04</span><span class="eyebrow-label">Negocio</span></p>
     <h2>Modelo de negocio y costos</h2>
     <p style="color:var(--muted); max-width:760px">
       Modelo <strong style="color:var(--txt)">directo al consumidor (DTC)</strong> con marca propia sobre fabricantes de valor.
@@ -282,8 +286,8 @@
       <div class="card">
         <h3>Costos a vigilar</h3>
         <ul class="clean">
-          <li>Comisiones de pasarela de pago (ver tabla)</li>
-          <li>Logística y última milla</li>
+          <li>Comisiones de pasarela de pago (ver tabla, ahora verificadas)</li>
+          <li>Logística y última milla (~$17.750 COP domicilio, Servientrega — cotizador oficial)</li>
           <li>Devoluciones y fórmula óptica incorrecta</li>
           <li>Importación / arancel según fabricante</li>
           <li>Adquisición de cliente (CAC) vs. LTV</li>
@@ -291,26 +295,281 @@
       </div>
     </div>
 
-    <h3 style="margin-top:28px">Pasarelas de pago evaluadas</h3>
-    <p style="color:var(--muted)">Benchmark inicial de opciones para el mercado colombiano. Las comisiones exactas deben confirmarse con cada proveedor (ver Pendientes).</p>
+    <h3 style="margin-top:28px">Comisiones de pasarela de pago — verificadas (2026)</h3>
+    <p style="color:var(--muted)">Tasas confirmadas con fuentes directas de cada proveedor. Se agrega <strong style="color:var(--txt)">+1 punto porcentual</strong> de colchón sobre la comisión final de cada pasarela (contingencia por variaciones de plan, IVA o cargos no capturados en la tarifa publicada). Para los cálculos de margen se usa <strong style="color:var(--txt)">4% + $800 COP</strong> como estimado blended simplificado (nota: la tasa real de PayU es mayor, ver tabla).</p>
     <table>
-      <thead><tr><th>Pasarela</th><th>Enfoque</th><th>Estado</th></tr></thead>
+      <thead><tr><th>Pasarela</th><th>Tarifas<br><span style="font-weight:400; font-size:.8rem">Tarjeta · PSE / Nequi / QR</span></th><th>% final · escenarios<br><span style="font-weight:400; font-size:.8rem">al ticket ~$194k</span></th><th>Análisis<br><span style="font-weight:400; font-size:.8rem">% óptimo · lectura para este proyecto</span></th></tr></thead>
       <tbody>
-        <tr><td>Wompi</td><td>Local (Bancolombia)</td><td class="badge">Benchmarkeada</td></tr>
-        <tr><td>ePayco</td><td>Local</td><td class="badge">Benchmarkeada</td></tr>
-        <tr><td>Bold</td><td>Local</td><td class="badge">Benchmarkeada</td></tr>
-        <tr><td>PayU</td><td>Regional LatAm</td><td class="badge">Benchmarkeada</td></tr>
-        <tr><td>Mercado Pago</td><td>Regional LatAm</td><td class="badge">Benchmarkeada</td></tr>
-        <tr><td>Stripe</td><td>Internacional</td><td class="badge">Benchmarkeada</td></tr>
+        <tr>
+          <td><a href="https://corporate.payu.com/tarifas-de-payu-en-latinoamerica/" target="_blank" rel="noopener">PayU</a></td>
+          <td>3,29% + $300 COP <em>(antes de IVA 19%)</em><br><span style="font-size:.82rem; color:var(--muted)">+ retenciones en fuente sobre tarjetas: Renta 1,5% · ICA 0,414% · IVA 15% sobre el IVA</span><span style="display:block; margin-top:6px; padding-top:6px; border-top:1px solid var(--line); font-size:.82rem; color:var(--muted)">PSE: mismo rate · mínimo $450 COP &middot; Pago Referenciado: mínimo $9.900 COP + IVA</span></td>
+          <td><strong style="color:var(--warn)">~4,3%</strong><br><span style="font-size:.82rem; color:var(--muted)">excluye retenciones</span></td>
+          <td><div style="display:flex;gap:14px;align-items:flex-start"><div style="flex-shrink:0;min-width:58px;text-align:center"><strong style="color:var(--warn)">5,1%</strong><br><span style="font-size:.76rem;color:var(--muted)">4,1% + 1pp colchón</span></div><div><span class="src-tag src-pend" style="font-size:.72rem">No recomendado</span><br>Las retenciones en fuente sobre tarjetas (Renta 1,5% + ICA 0,414%) elevan el costo real más allá del 4,1% y añaden complejidad contable desde el primer día.</div></div></td>
+        </tr>
+        <tr>
+          <td><a href="https://wompi.com/es/co/planes-tarifas/" target="_blank" rel="noopener">Wompi</a></td>
+          <td>2,65% + $700 COP + IVA 19% (tarjeta crédito/débito)<br><span style="font-size:.82rem; color:var(--muted)">+1,44% adicional cuando el cliente gana Puntos Colombia &middot; Tarjetas internacionales sin costo extra</span><span style="display:block; margin-top:6px; padding-top:6px; border-top:1px solid var(--line); font-size:.82rem; color:var(--muted)">PSE: mismo rate &middot; Código QR: 1% + IVA</span></td>
+          <td><strong style="color:var(--warn)">~4,0%</strong> (base)<br><span style="font-size:.82rem; color:var(--muted)">~5,7% si el cliente usa Puntos Colombia</span><br><span style="font-size:.82rem; color:var(--accent2)">~1,2% vía QR</span></td>
+          <td><div style="display:flex;gap:14px;align-items:flex-start"><div style="flex-shrink:0;min-width:58px;text-align:center"><strong style="color:var(--accent2)">4,6%</strong><br><span style="font-size:.76rem;color:var(--muted)">3,6% + 1pp colchón</span></div><div><span class="src-tag src-ver" style="font-size:.72rem">★ Recomendada</span><br>Ecosistema Bancolombia — máxima confianza del comprador colombiano. Tarjetas internacionales sin costo extra. Mejor tasa base sin dependencia bancaria. No activar Puntos Colombia al inicio (sube a ~5,3%).</div></div></td>
+        </tr>
+        <tr>
+          <td><a href="https://www.mercadopago.com.co/ayuda/Cu-nto-cuesta-recibir-pagos_220" target="_blank" rel="noopener">Mercado Pago</a></td>
+          <td><strong>Checkout</strong> (integrado): 2,79% + $800 COP — acreditación 14 días<br><strong>Link de pago</strong>: 3,29% + $800 COP — acreditación al instante<br><span style="font-size:.82rem; color:var(--muted)">Tarifa uniforme para todos los medios — crédito, débito, PSE, efectivo, dinero MP</span></td>
+          <td>
+            <strong style="color:var(--accent2)">~3,6%</strong> checkout<br>
+            <strong style="color:var(--warn)">~4,1%</strong> link de pago<br>
+            <span style="font-size:.82rem; color:var(--muted)">(sin IVA; verificar si aplica 19%)</span>
+          </td>
+          <td><div style="display:flex;gap:14px;align-items:flex-start"><div style="flex-shrink:0;min-width:58px;text-align:center"><strong style="color:var(--warn)">4,8%</strong><br><span style="font-size:.76rem;color:var(--muted)">3,8% + 1pp colchón</span></div><div><span class="src-tag src-cond" style="font-size:.72rem; background:rgba(91,140,255,.12); color:var(--accent); border:1px solid rgba(91,140,255,.3)">Secundaria</span><br>Mayor base de usuarios en LatAm. Problema crítico: checkout acredita en <strong style="color:var(--txt)">14 días</strong> — destruye flujo de caja en etapa temprana. Link de pago acredita al instante pero sube a ~4,4%.</div></div></td>
+        </tr>
+        <tr>
+          <td><a href="https://epayco.com/tarifas/" target="_blank" rel="noopener">ePayco</a></td>
+          <td><strong>Plan Agregador</strong> (Davivienda): 2,68% + $900 COP + IVA<br><span style="font-size:.82rem; color:var(--accent2)">Promo vigente: 2,64% + $690 COP + IVA</span><br><strong>Plan Otros Bancos</strong>: 3,29% + $700 COP + IVA<br><span style="font-size:.82rem; color:var(--muted)">Tarjetas internacionales: +0,8% &middot; 3D Secure incluido &middot; Plan Agregador incluye retiros ilimitados</span><span style="display:block; margin-top:6px; padding-top:6px; border-top:1px solid var(--line); font-size:.82rem; color:var(--muted)">PSE: mismo rate por plan &middot; PSE &lt; $60.000: +$2.200 COP &middot; Plan Otros Bancos: 5 retiros gratis/mes; desde el 6.&deg; retiro $3.500 COP</span></td>
+          <td>
+            <strong style="color:var(--warn)">~4,3%</strong> Agregador estándar<br>
+            <strong style="color:var(--accent2)">~4,0%</strong> Agregador promo<br>
+            <strong style="color:var(--warn)">~4,7%</strong> Otros Bancos<br>
+            <span style="font-size:.82rem; color:var(--muted)">(ticket $100k, con IVA 19%)</span>
+          </td>
+          <td><div style="display:flex;gap:14px;align-items:flex-start"><div style="flex-shrink:0;min-width:58px;text-align:center"><strong style="color:var(--accent2)">4,6%</strong><br><span style="font-size:.76rem;color:var(--muted)">3,6% + 1pp colchón</span></div><div><span class="src-tag src-cond" style="font-size:.72rem; background:rgba(91,140,255,.12); color:var(--accent); border:1px solid rgba(91,140,255,.3)">Alternativa</span><br>Tasa promo empata con Wompi, pero requiere cuenta Davivienda y la tarifa es <em>por tiempo limitado</em>. Plan Otros Bancos sube a 4,3% — inaceptable. Evaluar si ya tienen relación con Davivienda.</div></div></td>
+        </tr>
+        <tr style="border-top:2px dashed var(--line)">
+          <td><a href="https://co.addi.com/tasas-tarifas" target="_blank" rel="noopener">Addi</a><br><span style="font-size:.78rem; color:var(--accent); font-weight:600">BNPL — no es pasarela</span></td>
+          <td>No aplica — el comercio recibe el <strong>valor total de la venta de inmediato</strong>; Addi asume el riesgo de crédito y mora. Comisión al comercio: <strong>variable</strong> según volumen, sector y campaña (no publicada).<br><span style="font-size:.82rem; color:var(--muted)">El cliente paga a Addi en hasta 24 cuotas (0%–29,56% E.A. según perfil) directamente a Addi, no al comercio. Requiere <strong>persona jurídica</strong> — no aplica para persona natural.</span></td>
+          <td colspan="2"><div style="display:flex;gap:14px;align-items:flex-start"><div style="flex-shrink:0;min-width:58px;text-align:center"><strong style="color:var(--muted)">Variable</strong><br><span style="font-size:.76rem;color:var(--muted)">sin tarifa pública · negociar</span></div><div><span class="src-tag src-cond" style="font-size:.72rem; background:rgba(91,140,255,.12); color:var(--accent); border:1px solid rgba(91,140,255,.3)">Complementaria</span><br>No reemplaza la pasarela principal — se integra junto a ella. Útil para aumentar conversión en tickets de $90k–$161k ofreciendo cuotas sin tarjeta. Desembolso mínimo a <strong style="color:var(--txt)">7 días</strong>. La comisión hay que negociarla directamente; con márgenes ajustados hay que confirmar que no la destruye.</div></div></td>
+        </tr>
       </tbody>
     </table>
+    <p style="margin-top:10px; font-size:.85rem; color:var(--muted)">
+      PayU — transferencia a cuenta bancaria (giro nacional): primeros 3 retiros/mes gratis; desde el 4.° retiro: $6.500 COP + IVA. Las transacciones no exitosas (declinadas, abandonadas) no generan cobro de procesamiento.
+      <br>Ticket representativo ($194.000 COP): promedio de los puntos medios de los 4 productos — Acuvue Oasys $250k &middot; AIR OPTIX $273k &middot; SofLens 59 $128k &middot; Comfortvue Plus $126k.
+      Comisión efectiva blended al ticket representativo: <strong style="color:var(--txt)">4,6%–5,1%</strong> según pasarela (plan óptimo de cada una + 1pp de colchón). Fuentes:
+      <a href="https://corporate.payu.com/tarifas-de-payu-en-latinoamerica/" target="_blank" rel="noopener">PayU oficial</a> &middot;
+      <a href="https://wompi.com/es/co/planes-tarifas/" target="_blank" rel="noopener">Wompi oficial</a> &middot;
+      <a href="https://www.mercadopago.com.co/ayuda/Cu-nto-cuesta-recibir-pagos_220" target="_blank" rel="noopener">Mercado Pago oficial</a> &middot;
+      <a href="https://www.tiendanube.com/blog/pasarelas-de-pago-colombia/" target="_blank" rel="noopener">Tiendanube</a> &middot;
+      <a href="https://epayco.com/tarifas/" target="_blank" rel="noopener">ePayco oficial</a> &middot;
+      <a href="https://co.addi.com/tasas-tarifas" target="_blank" rel="noopener">Addi tarifas</a> &middot;
+      <a href="https://btodigital.com/pasarelas-pago-colombia-comparativa-guia-negocio/" target="_blank" rel="noopener">btodigital</a>
+    </p>
+
+    <h3 style="margin-top:28px">Logística — tarifas verificadas</h3>
+    <table>
+      <thead><tr><th>Courier</th><th>Tarifa mensajería — paquete ≤1 kg (por tipo de ruta)</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://interrapidisimo.com/cotiza-tu-envio" target="_blank" rel="noopener">Interrapidísimo</a></td><td>$18.500 COP — Mensajería Estándar <span class="src-tag src-ver" style="font-size:.72rem">Verificado — cotizador oficial</span></td></tr>
+        <tr><td><a href="https://coordinadora.com/servicios/documentos/" target="_blank" rel="noopener">Coordinadora</a></td><td>Local $8.040 · Regional $9.330 · Nacional $15.920 · Zonal $22.990 · Destinos especiales $37.630<br><span style="font-size:.82rem; color:var(--muted)">+ 1% del valor declarado (flete de manejo) · Tarifa oficial mensajería paquetes ≤5 kg</span> <span class="src-tag src-ver" style="font-size:.72rem">Verificado — tarifas oficiales</span></td></tr>
+        <tr><td><a href="https://www.servientrega.com/wps/portal/cotizador" target="_blank" rel="noopener">Servientrega</a></td><td>$17.750 COP <span class="src-tag src-ver" style="font-size:.72rem">Verificado — cotizador oficial</span></td></tr>
+        <tr><td><a href="https://tcc.com.co/envios-nacionales/formas-de-pago-y-tarifas/" target="_blank" rel="noopener">TCC</a></td><td>Urbanas $15.900 · Regional/Nacional $16.500 · Zonal $23.100 · Otros destinos $27.300<br><span style="font-size:.82rem; color:var(--muted)">+ 2% flota de manejo sobre el flete · Aéreo desde $91.600 · Tarifa pago en origen, paquete 1 kg</span> <span class="src-tag src-ver" style="font-size:.72rem">Verificado — tarifas oficiales</span></td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:10px; font-size:.85rem; color:var(--muted)">Se usa <strong style="color:var(--txt)">$18.500 COP</strong> como estimado para los cálculos de margen (Interrapidísimo Mensajería Estándar, verificado cotizador oficial). Fuentes:
+      <a href="https://interrapidisimo.com/cotiza-tu-envio" target="_blank" rel="noopener">Interrapidísimo — cotizador oficial</a> ·
+      <a href="https://coordinadora.com/servicios/documentos/" target="_blank" rel="noopener">Coordinadora — tarifas oficiales mensajería</a> ·
+      <a href="https://www.servientrega.com/wps/portal/cotizador" target="_blank" rel="noopener">Servientrega — cotizador oficial</a> ·
+      <a href="https://tcc.com.co/envios-nacionales/formas-de-pago-y-tarifas/" target="_blank" rel="noopener">TCC — tarifas oficiales</a>
+    </p>
+    <span class="src-tag src-ver">Verificado — agosto 2026</span>
+  </div>
+</section>
+
+<!-- VIABILIDAD -->
+<section id="viabilidad">
+  <div class="wrap">
+    <p class="eyebrow"><span class="eyebrow-num">05</span><span class="eyebrow-label">El cálculo que faltaba</span></p>
+    <h2>Umbral de viabilidad</h2>
+    <p style="color:var(--muted); max-width:760px">
+      Pregunta que responde esta sección: <strong style="color:var(--txt)">¿a qué costo de proveedor el negocio deja de ser viable?</strong>
+      Fórmula: precio de venta − domicilio/logística − comisión de pasarela − empaque = costo máximo viable del proveedor.
+      Insumos usados en los cálculos de abajo: <strong style="color:var(--txt)">Wompi</strong> como pasarela recomendada (4,6% con colchón, simplificado a 4% + $800 COP para el barrido) y <strong style="color:var(--txt)">Servientrega</strong> como transportadora de referencia ($17.750 COP, cotizador oficial — tarifa plana verificada, sin componente porcentual ambiguo como Coordinadora o TCC).
+    </p>
+
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:16px; margin-bottom:28px">
+      <div class="card"><span class="tag" style="color:var(--accent2); border-color:rgba(34,211,166,.4)">≥ 35%</span><h3>Viable con pauta</h3><p>Aguanta inversión en adquisición pagada.</p></div>
+      <div class="card"><span class="tag" style="color:var(--warn); border-color:rgba(255,180,84,.4)">20–35%</span><h3>Viable con condiciones</h3><p>Solo con adquisición de bajo costo — no aguanta pauta paga agresiva.</p></div>
+      <div class="card"><span class="tag" style="color:var(--accent); border-color:rgba(91,140,255,.4)">10–20%</span><h3>Analizar</h3><p>Margen insuficiente para pauta; requiere revisión del modelo antes de operar.</p></div>
+      <div class="card"><span class="tag" style="color:#ff8080; border-color:rgba(255,90,90,.4)">&lt; 10%</span><h3>No viable · Pérdida</h3><p>Sin espacio para CAC, devoluciones ni imprevistos.</p></div>
+    </div>
+
+    <details class="accordion">
+      <summary>Sensibilidad de margen — Acuvue Oasys (categoría premium, referencia)</summary>
+      <div class="accordion-body">
+        <p style="color:var(--muted); font-size:.9rem">
+          Acuvue Oasys no es un producto que el proyecto compraría al proveedor (es J&amp;J, marca de tercero) — pero sí tiene
+          precios de venta verificados en 5 tiendas (ver Productos), así que se puede aplicar la misma fórmula verificada
+          (domicilio $17.750 + pasarela 4% + $800) a modo de <strong style="color:var(--txt)">escenario ilustrativo</strong>,
+          usando el <strong style="color:var(--txt)">mínimo</strong> ($220.000, Óptica Visión Natural), el
+          <strong style="color:var(--txt)">medio</strong> ($250.000, promedio de los 4 precios observados: $220.000 /
+          $229.500 / $270.000 / $280.000) y el <strong style="color:var(--txt)">máximo</strong> ($280.000, Lafam /
+          LentesPlus / GMO) ya verificados. Los valores de "costo proveedor" siguen siendo barridos hipotéticos — no una
+          cotización real, porque Acuvue no se abastece del mismo proveedor que Comfortvue.
+        </p>
+        <table>
+          <thead><tr><th>Costo proveedor (escenario)</th><th>Costo total (dom.+pasarela)</th><th>Precio de venta</th><th>Margen</th><th>%</th></tr></thead>
+          <tbody>
+            <tr><td>$115.650</td><td>$143.000</td><td>$220.000 (mínimo)</td><td>$77.000</td><td style="color:var(--accent2)">35,0%</td></tr>
+            <tr><td>$159.650</td><td>$187.000</td><td>$220.000 (mínimo)</td><td>$33.000</td><td style="color:var(--warn)">15,0%</td></tr>
+            <tr><td>$192.650</td><td>$220.000</td><td>$220.000 (mínimo)</td><td>$0</td><td style="color:var(--warn)">0,0% (punto de equilibrio)</td></tr>
+            <tr><td>$133.950</td><td>$162.500</td><td>$250.000 (medio)</td><td>$87.500</td><td style="color:var(--accent2)">35,0%</td></tr>
+            <tr><td>$183.950</td><td>$212.500</td><td>$250.000 (medio)</td><td>$37.500</td><td style="color:var(--warn)">15,0%</td></tr>
+            <tr><td>$221.450</td><td>$250.000</td><td>$250.000 (medio)</td><td>$0</td><td style="color:var(--warn)">0,0% (punto de equilibrio)</td></tr>
+            <tr><td>$152.250</td><td>$182.000</td><td>$280.000 (máximo)</td><td>$98.000</td><td style="color:var(--accent2)">35,0%</td></tr>
+            <tr><td>$208.250</td><td>$238.000</td><td>$280.000 (máximo)</td><td>$42.000</td><td style="color:var(--warn)">15,0%</td></tr>
+            <tr><td>$250.250</td><td>$280.000</td><td>$280.000 (máximo)</td><td>$0</td><td style="color:var(--warn)">0,0% (punto de equilibrio)</td></tr>
+          </tbody>
+          <tfoot>
+            <tr class="calc-row">
+              <td>
+                <span class="calc-lbl">Tu costo proveedor (COP)</span>
+                <input type="number" class="calc-input" id="prov-1" placeholder="ej. 150.000" aria-label="Tu costo proveedor" oninput="calcMargen(1)">
+              </td>
+              <td id="ctotal-1"><span class="calc-lbl">Costo total</span><span class="calc-val" style="color:var(--muted)">—</span></td>
+              <td>
+                <span class="calc-lbl">Precio de venta (COP)</span>
+                <input type="number" class="calc-input" id="pventa-1" placeholder="ej. 250.000" aria-label="Precio de venta" oninput="calcMargen(1)">
+              </td>
+              <td id="cmargen-1"><span class="calc-lbl">Margen</span><span class="calc-val" style="color:var(--muted)">—</span></td>
+              <td id="cpct-1"><span class="calc-lbl">%</span><span class="calc-val" style="color:var(--muted)">—</span></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </details>
+
+    <details class="accordion">
+      <summary>Sensibilidad de margen — AIR OPTIX Plus HydraGlyde (categoría premium, referencia)</summary>
+      <div class="accordion-body">
+        <p style="color:var(--muted); font-size:.9rem">
+          AIR OPTIX Plus HydraGlyde es un producto Alcon — no se abastece del mismo proveedor que Comfortvue, por lo que los valores de
+          "costo proveedor" son barridos hipotéticos, no cotizaciones reales. Se aplica la fórmula verificada
+          (domicilio $17.750 + pasarela 4% + $800) sobre los precios reales observados:
+          <strong style="color:var(--txt)">mínimo</strong> $250.750 (promo Opticentro),
+          <strong style="color:var(--txt)">medio</strong> $275.250 (promedio: $250.750 / $280.000 / $295.000)
+          y <strong style="color:var(--txt)">máximo</strong> $295.000 (Lafam / Opticentro regular).
+        </p>
+        <table>
+          <thead><tr><th>Costo proveedor (escenario)</th><th>Costo total (dom.+pasarela)</th><th>Precio de venta</th><th>Margen</th><th>%</th></tr></thead>
+          <tbody>
+            <tr><td>$134.408</td><td>$162.988</td><td>$250.750 (mínimo)</td><td>$87.762</td><td style="color:var(--accent2)">35,0%</td></tr>
+            <tr><td>$184.558</td><td>$213.138</td><td>$250.750 (mínimo)</td><td>$37.612</td><td style="color:var(--warn)">15,0%</td></tr>
+            <tr><td>$222.170</td><td>$250.750</td><td>$250.750 (mínimo)</td><td>$0</td><td style="color:var(--warn)">0,0% (punto de equilibrio)</td></tr>
+            <tr><td>$149.353</td><td>$178.913</td><td>$275.250 (medio)</td><td>$96.337</td><td style="color:var(--accent2)">35,0%</td></tr>
+            <tr><td>$204.403</td><td>$233.963</td><td>$275.250 (medio)</td><td>$41.287</td><td style="color:var(--warn)">15,0%</td></tr>
+            <tr><td>$245.690</td><td>$275.250</td><td>$275.250 (medio)</td><td>$0</td><td style="color:var(--warn)">0,0% (punto de equilibrio)</td></tr>
+            <tr><td>$161.400</td><td>$191.750</td><td>$295.000 (máximo)</td><td>$103.250</td><td style="color:var(--accent2)">35,0%</td></tr>
+            <tr><td>$220.400</td><td>$250.750</td><td>$295.000 (máximo)</td><td>$44.250</td><td style="color:var(--warn)">15,0%</td></tr>
+            <tr><td>$264.650</td><td>$295.000</td><td>$295.000 (máximo)</td><td>$0</td><td style="color:var(--warn)">0,0% (punto de equilibrio)</td></tr>
+          </tbody>
+          <tfoot>
+            <tr class="calc-row">
+              <td>
+                <span class="calc-lbl">Tu costo proveedor (COP)</span>
+                <input type="number" class="calc-input" id="prov-3" placeholder="ej. 200.000" aria-label="Tu costo proveedor" oninput="calcMargen(3)">
+              </td>
+              <td id="ctotal-3"><span class="calc-lbl">Costo total</span><span class="calc-val" style="color:var(--muted)">—</span></td>
+              <td>
+                <span class="calc-lbl">Precio de venta (COP)</span>
+                <input type="number" class="calc-input" id="pventa-3" placeholder="ej. 280.000" aria-label="Precio de venta" oninput="calcMargen(3)">
+              </td>
+              <td id="cmargen-3"><span class="calc-lbl">Margen</span><span class="calc-val" style="color:var(--muted)">—</span></td>
+              <td id="cpct-3"><span class="calc-lbl">%</span><span class="calc-val" style="color:var(--muted)">—</span></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </details>
+
+    <details class="accordion">
+      <summary>Sensibilidad de margen — SofLens 59 (categoría media, referencia)</summary>
+      <div class="accordion-body">
+        <p style="color:var(--muted); font-size:.9rem">
+          SofLens 59 es un producto Bausch + Lomb — no se abastece del mismo proveedor que Comfortvue, por lo que los valores de
+          "costo proveedor" son barridos hipotéticos, no cotizaciones reales. Se aplica la fórmula verificada
+          (domicilio $17.750 + pasarela 4% + $800) sobre los precios reales observados:
+          <strong style="color:var(--txt)">mínimo</strong> $110.000 (LentesPlus),
+          <strong style="color:var(--txt)">medio</strong> $125.500 (promedio de los 6 precios observados: $110.000 / $120.000 / $123.250 / $124.950 / $135.000 / $140.000)
+          y <strong style="color:var(--txt)">máximo</strong> $140.000 (Tienda Óptica).
+        </p>
+        <table>
+          <thead><tr><th>Costo proveedor (escenario)</th><th>Costo total (dom.+pasarela)</th><th>Precio de venta</th><th>Margen</th><th>%</th></tr></thead>
+          <tbody>
+            <tr><td>$48.550</td><td>$71.500</td><td>$110.000 (mínimo)</td><td>$38.500</td><td style="color:var(--accent2)">35,0%</td></tr>
+            <tr><td>$70.550</td><td>$93.500</td><td>$110.000 (mínimo)</td><td>$16.500</td><td style="color:var(--warn)">15,0%</td></tr>
+            <tr><td>$87.050</td><td>$110.000</td><td>$110.000 (mínimo)</td><td>$0</td><td style="color:var(--warn)">0,0% (punto de equilibrio)</td></tr>
+            <tr><td>$58.005</td><td>$81.575</td><td>$125.500 (medio)</td><td>$43.925</td><td style="color:var(--accent2)">35,0%</td></tr>
+            <tr><td>$83.105</td><td>$106.675</td><td>$125.500 (medio)</td><td>$18.825</td><td style="color:var(--warn)">15,0%</td></tr>
+            <tr><td>$101.930</td><td>$125.500</td><td>$125.500 (medio)</td><td>$0</td><td style="color:var(--warn)">0,0% (punto de equilibrio)</td></tr>
+            <tr><td>$66.850</td><td>$91.000</td><td>$140.000 (máximo)</td><td>$49.000</td><td style="color:var(--accent2)">35,0%</td></tr>
+            <tr><td>$94.850</td><td>$119.000</td><td>$140.000 (máximo)</td><td>$21.000</td><td style="color:var(--warn)">15,0%</td></tr>
+            <tr><td>$115.850</td><td>$140.000</td><td>$140.000 (máximo)</td><td>$0</td><td style="color:var(--warn)">0,0% (punto de equilibrio)</td></tr>
+          </tbody>
+          <tfoot>
+            <tr class="calc-row">
+              <td>
+                <span class="calc-lbl">Tu costo proveedor (COP)</span>
+                <input type="number" class="calc-input" id="prov-4" placeholder="ej. 80.000" aria-label="Tu costo proveedor" oninput="calcMargen(4)">
+              </td>
+              <td id="ctotal-4"><span class="calc-lbl">Costo total</span><span class="calc-val" style="color:var(--muted)">—</span></td>
+              <td>
+                <span class="calc-lbl">Precio de venta (COP)</span>
+                <input type="number" class="calc-input" id="pventa-4" placeholder="ej. 125.000" aria-label="Precio de venta" oninput="calcMargen(4)">
+              </td>
+              <td id="cmargen-4"><span class="calc-lbl">Margen</span><span class="calc-val" style="color:var(--muted)">—</span></td>
+              <td id="cpct-4"><span class="calc-lbl">%</span><span class="calc-val" style="color:var(--muted)">—</span></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </details>
+
+    <details class="accordion">
+      <summary>Sensibilidad de margen según costo del proveedor — Comfortvue Plus</summary>
+      <div class="accordion-body">
+        <p style="color:var(--muted); font-size:.9rem">
+          Este cálculo se hizo únicamente sobre <strong style="color:var(--txt)">Comfortvue Plus</strong>, porque es el único de los
+          4 productos de referencia que el proyecto compraría al proveedor bajo marca propia. Se usan los tres precios de
+          venta ya verificados: <strong style="color:var(--txt)">$90.000</strong> (mínimo, Óptica Visión Natural),
+          <strong style="color:var(--txt)">$127.000</strong> (medio, promedio aproximado: $90.000 / $130.000 / $161.500)
+          y <strong style="color:var(--txt)">$161.500</strong> (máximo, Vista Óptica) — el rango real de mercado observado hasta ahora.
+        </p>
+        <table>
+          <thead><tr><th>Costo proveedor</th><th>Costo total (dom.+pasarela)</th><th>Precio de venta</th><th>Margen</th><th>%</th></tr></thead>
+          <tbody>
+            <tr><td>$36.350</td><td>$58.500</td><td>$90.000 (mínimo)</td><td>$31.500</td><td style="color:var(--accent2)">35,0%</td></tr>
+            <tr><td>$54.350</td><td>$76.500</td><td>$90.000 (mínimo)</td><td>$13.500</td><td style="color:var(--warn)">15,0%</td></tr>
+            <tr><td>$67.850</td><td>$90.000</td><td>$90.000 (mínimo)</td><td>$0</td><td style="color:var(--warn)">0,0% (punto de equilibrio)</td></tr>
+            <tr><td>$58.920</td><td>$82.550</td><td>$127.000 (medio)</td><td>$44.450</td><td style="color:var(--accent2)">35,0%</td></tr>
+            <tr><td>$84.320</td><td>$107.950</td><td>$127.000 (medio)</td><td>$19.050</td><td style="color:var(--warn)">15,0%</td></tr>
+            <tr><td>$103.370</td><td>$127.000</td><td>$127.000 (medio)</td><td>$0</td><td style="color:var(--warn)">0,0% (punto de equilibrio)</td></tr>
+            <tr><td>$79.965</td><td>$104.975</td><td>$161.500 (máximo)</td><td>$56.525</td><td style="color:var(--accent2)">35,0%</td></tr>
+            <tr><td>$112.265</td><td>$137.275</td><td>$161.500 (máximo)</td><td>$24.225</td><td style="color:var(--warn)">15,0%</td></tr>
+            <tr><td>$136.490</td><td>$161.500</td><td>$161.500 (máximo)</td><td>$0</td><td style="color:var(--warn)">0,0% (punto de equilibrio)</td></tr>
+          </tbody>
+          <tfoot>
+            <tr class="calc-row">
+              <td>
+                <span class="calc-lbl">Tu costo proveedor (COP)</span>
+                <input type="number" class="calc-input" id="prov-2" placeholder="ej. 70.000" aria-label="Tu costo proveedor" oninput="calcMargen(2)">
+              </td>
+              <td id="ctotal-2"><span class="calc-lbl">Costo total</span><span class="calc-val" style="color:var(--muted)">—</span></td>
+              <td>
+                <span class="calc-lbl">Precio de venta (COP)</span>
+                <input type="number" class="calc-input" id="pventa-2" placeholder="ej. 130.000" aria-label="Precio de venta" oninput="calcMargen(2)">
+              </td>
+              <td id="cmargen-2"><span class="calc-lbl">Margen</span><span class="calc-val" style="color:var(--muted)">—</span></td>
+              <td id="cpct-2"><span class="calc-lbl">%</span><span class="calc-val" style="color:var(--muted)">—</span></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </details>
   </div>
 </section>
 
 <!-- MARCA -->
 <section id="marca">
   <div class="wrap">
-    <p class="eyebrow">05 · Identidad</p>
+    <p class="eyebrow"><span class="eyebrow-num">06</span><span class="eyebrow-label">Identidad</span></p>
     <h2>Marca</h2>
     <p style="color:var(--muted); max-width:760px">
       Se completaron dos rondas de investigación y verificación de nombres, revisando disponibilidad de dominio en
@@ -344,47 +603,42 @@
 <!-- PENDIENTES / PLACEHOLDERS -->
 <section id="pendientes">
   <div class="wrap">
-    <p class="eyebrow">06 · Por investigar</p>
+    <p class="eyebrow"><span class="eyebrow-num">07</span><span class="eyebrow-label">Por investigar</span></p>
     <h2>Pendientes de investigación</h2>
     <p style="color:var(--muted); max-width:760px">
-      Espacios reservados para los datos que aún faltan por levantar. Se completarán con cifras y fuentes verificables.
+      Varios pendientes de la primera investigación ya se verificaron con fuentes externas (precios de competencia,
+      comisiones de pasarela, tarifas de logística). Quedan los que bloquean directamente la conclusión de viabilidad.
     </p>
 
     <div class="grid3" style="margin-top:8px">
       <div class="ph">
-        <span class="badge-ph">Pendiente</span>
-        <h3>Precios locales por SKU</h3>
-        <p>Precios actuales en Colombia (LentesPlus, GMO, Lafam) con captura y link por producto.</p>
+        <span class="badge-ph">Crítico · bloquea todo</span>
+        <h3>Costo real de compra al proveedor</h3>
+        <p>Precio de compra por caja Comfortvue/Interojo, MOQ, incoterms y tiempos de entrega. Sin este dato no se puede leer la tabla de viabilidad.</p>
         <div class="skeleton"></div><div class="skeleton s2"></div><div class="skeleton s3"></div>
       </div>
       <div class="ph">
         <span class="badge-ph">Pendiente</span>
-        <h3>Comisiones de pasarelas</h3>
-        <p>Tasa por transacción vigente de cada pasarela, más costos fijos y de retiro.</p>
+        <h3>Modelo financiero completo</h3>
+        <p>P&amp;L unitario, CAC vs LTV y punto de equilibrio — una vez se tenga el costo real de proveedor.</p>
         <div class="skeleton"></div><div class="skeleton s2"></div><div class="skeleton s3"></div>
       </div>
       <div class="ph">
         <span class="badge-ph">Pendiente</span>
-        <h3>Costo de producto</h3>
-        <p>Precio de compra por caja Comfortvue/Interojo, mínimos de pedido, tiempos e Incoterms.</p>
+        <h3>Producto más vendido en tienda física</h3>
+        <p>Identificar cuál es el producto de mayor rotación en la tienda física del proveedor, para evaluar si conviene llevar ese mismo producto al canal online bajo el modelo de dropshipping.</p>
         <div class="skeleton"></div><div class="skeleton s2"></div><div class="skeleton s3"></div>
       </div>
       <div class="ph">
-        <span class="badge-ph">Pendiente</span>
-        <h3>Logística y última milla</h3>
-        <p>Tarifas de couriers en Colombia, cobertura y costo de devoluciones.</p>
+        <span class="badge-ph">Pendiente · regulatorio</span>
+        <h3>Registro INVIMA</h3>
+        <p>Verificar si como vendedores es necesario tramitar registro INVIMA para comercializar lentes de contacto en Colombia.</p>
         <div class="skeleton"></div><div class="skeleton s2"></div><div class="skeleton s3"></div>
       </div>
       <div class="ph">
-        <span class="badge-ph">Pendiente</span>
-        <h3>Aranceles e importación</h3>
-        <p>Clasificación arancelaria y regulación sanitaria (INVIMA) aplicable.</p>
-        <div class="skeleton"></div><div class="skeleton s2"></div><div class="skeleton s3"></div>
-      </div>
-      <div class="ph">
-        <span class="badge-ph">Pendiente</span>
-        <h3>Modelo financiero</h3>
-        <p>P&amp;L unitario, CAC vs LTV, punto de equilibrio y escenarios de suscripción.</p>
+        <span class="badge-ph">Pendiente · operativo</span>
+        <h3>Fórmula óptica del cliente</h3>
+        <p>Verificar si es obligatorio o recomendable pedirle al cliente que suba la fórmula óptica antes de procesar el pedido.</p>
         <div class="skeleton"></div><div class="skeleton s2"></div><div class="skeleton s3"></div>
       </div>
     </div>
@@ -394,7 +648,7 @@
 <!-- ROADMAP -->
 <section id="roadmap">
   <div class="wrap">
-    <p class="eyebrow">07 · Siguientes pasos</p>
+    <p class="eyebrow"><span class="eyebrow-num">08</span><span class="eyebrow-label">Siguientes pasos</span></p>
     <h2>Estado y roadmap</h2>
     <div class="timeline">
       <div class="tl-item done">
@@ -405,13 +659,21 @@
         <h3>Dos rondas de naming y verificación de dominios ✓</h3>
         <p style="color:var(--muted)">Candidatos Tier 1 / Tier 2 identificados; descartes documentados.</p>
       </div>
+      <div class="tl-item done">
+        <h3>Auditoría independiente de viabilidad ✓</h3>
+        <p style="color:var(--muted)">Precios reales de competencia, comisiones y logística verificados; umbral de margen calculado.</p>
+      </div>
       <div class="tl-item">
-        <h3>Levantamiento de precios y costos locales</h3>
-        <p style="color:var(--muted)">Precios por SKU, comisiones, costo de producto y logística (ver Pendientes).</p>
+        <h3>Cotización real del proveedor</h3>
+        <p style="color:var(--muted)">Llevar el checklist de preguntas al proveedor: costo por caja, exclusividad (ver Pendientes).</p>
+      </div>
+      <div class="tl-item">
+        <h3>Decisión de viabilidad</h3>
+        <p style="color:var(--muted)">Ubicar el costo real del proveedor en la tabla de sensibilidad y decidir si se lanza.</p>
       </div>
       <div class="tl-item">
         <h3>Selección de nombre y vetting profundo</h3>
-        <p style="color:var(--muted)">Marca registrada, fonética y "feel" sobre el candidato elegido.</p>
+        <p style="color:var(--muted)">Marca registrada, fonética y "feel" sobre el candidato elegido — solo si el proyecto resulta viable.</p>
       </div>
       <div class="tl-item">
         <h3>Modelo de negocio y go-to-market</h3>
@@ -423,11 +685,12 @@
 
 <footer>
   <div class="wrap">
-    <p><strong style="color:var(--txt)">Proyecto Lentes de Contacto — documento de investigación interno.</strong></p>
+    <p><strong style="color:var(--txt)">Proyecto Lentes de Contacto — investigación + auditoría de viabilidad independiente.</strong></p>
     <p>Terminología clave en uso: omnicanal · DTC · BNPL · headless/SPA · GMV · LTV · pasarela de pagos · base curve · fórmula óptica · Dk/t.</p>
-    <p class="badge">Última actualización: agosto 2026. Documento de trabajo; los datos marcados como pendientes se completarán con fuentes verificables.</p>
+    <p class="badge">Última actualización: agosto 2026. Basado en <code>INVESTIGACION.md</code> y <code>ANALISIS-VIABILIDAD.md</code> de este repositorio; los datos marcados como pendientes se completarán con fuentes verificables.</p>
   </div>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
