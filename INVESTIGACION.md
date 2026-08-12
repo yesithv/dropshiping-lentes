@@ -4,6 +4,8 @@
 >
 > **Última actualización:** agosto 2026
 > **Estado del proyecto:** investigación / desarrollo de marca (etapa temprana)
+>
+> ⚠️ **Este documento es material histórico/original** (la investigación inicial). Muchas de sus cifras y pendientes ya fueron verificados y superados por datos reales — ver `ANALISIS-VIABILIDAD.md` (auditoría) e `index.html` (**fuente de verdad vigente del proyecto**, con precios, comisiones y logística verificados y actualizados).
 
 ---
 
@@ -90,6 +92,8 @@ Comfortvue es la referencia clave para la estrategia de marca propia: producto d
 | Stripe | Internacional | Benchmarkeada |
 
 > Las tasas de comisión aproximadas por transacción se levantaron en la investigación pero deben **re-verificarse a la fecha actual** con cada proveedor antes de decidir. Ver §7.
+>
+> ✅ **Resuelto** — comisiones verificadas con fuentes oficiales de PayU, Wompi, Mercado Pago, ePayco y Addi (BNPL). Ver `index.html` §04 (Modelo & Costos) y `ANALISIS-VIABILIDAD.md` §3.
 
 ---
 
@@ -114,12 +118,12 @@ klarvi · novavista · vizza · ocuvia · lentia · guino · lucido
 
 ## 7. Pendientes de investigación
 
-- [ ] **Precios locales por SKU** — levantar precios actuales en Colombia (LentesPlus, GMO, Lafam) con capturas y links por producto y calcular el margen objetivo bajo marca propia.
-- [ ] **Comisiones de pasarelas** — confirmar la tasa por transacción vigente de cada pasarela (Wompi, ePayco, Bold, PayU, Mercado Pago, Stripe), más costos fijos y de retiro.
-- [ ] **Costo de producto (Comfortvue/Interojo)** — precio de compra por caja, mínimos de pedido, tiempos e Incoterms.
-- [ ] **Logística y última milla** — tarifas de couriers en Colombia, cobertura y costo de devoluciones.
-- [ ] **Aranceles e importación** — clasificación arancelaria de lentes de contacto y regulación sanitaria (INVIMA) aplicable.
-- [ ] **Modelo financiero** — P&L unitario, CAC vs LTV, punto de equilibrio, escenarios de suscripción.
+- [x] ~~**Precios locales por SKU**~~ — resuelto: precios verificados en tienda para los 4 productos de referencia. Ver `index.html` §03 (Productos) y §02 (Competencia).
+- [x] ~~**Comisiones de pasarelas**~~ — resuelto: tarifas oficiales confirmadas (PayU, Wompi, Mercado Pago, ePayco, Addi). Ver `index.html` §04 y `ANALISIS-VIABILIDAD.md` §3.
+- [x] ~~**Logística y última milla**~~ — resuelto: tarifas oficiales de Interrapidísimo, Coordinadora, Servientrega y TCC. Ver `index.html` §04 y `ANALISIS-VIABILIDAD.md` §4.
+- [ ] **Costo de producto (Comfortvue/Interojo)** — precio de compra por caja, mínimos de pedido, tiempos e Incoterms. **Sigue pendiente — bloquea la conclusión de viabilidad.** Ver `index.html` §07 y `ANALISIS-VIABILIDAD.md` §5/§7.
+- [ ] **Aranceles e importación** — clasificación arancelaria de lentes de contacto y regulación sanitaria (INVIMA) aplicable. Ver `ANALISIS-VIABILIDAD.md` §1 para el marco regulatorio ya investigado.
+- [ ] **Modelo financiero** — P&L unitario, CAC vs LTV, punto de equilibrio, escenarios de suscripción. Bloqueado por el costo de proveedor.
 - [ ] **Selección de nombre final** — vetting profundo (marca registrada, fonética, feel) sobre el candidato elegido.
 - [ ] **Go-to-market** — canales de adquisición, estrategia de contenido y plan de lanzamiento.
 

@@ -2,8 +2,10 @@
 
 > Documento de contraste independiente. No reemplaza a `INVESTIGACION.md` (el material que entregó el proveedor/amigo) — lo audita, lo complementa con datos externos verificables y calcula, con la información disponible hoy, bajo qué condición numérica el negocio sería viable.
 >
-> **Fecha de elaboración:** agosto 2026
+> **Fecha de elaboración:** agosto 2026 · **Última sincronización con `index.html`:** 11 agosto 2026
 > **Autor:** análisis independiente solicitado por el dropshipper (no por el proveedor)
+>
+> ⚠️ **`index.html` es ahora la fuente de verdad del proyecto.** Este documento se mantiene sincronizado con sus cifras (precios, comisiones, logística, umbral de viabilidad), pero ante cualquier discrepancia futura, **`index.html` manda**. Las secciones de auditoría regulatoria (INVIMA, §1) y checklist al proveedor (§7) no tienen equivalente todavía en `index.html` y siguen siendo material original de este documento.
 
 ---
 
@@ -45,73 +47,69 @@ INVIMA emite alertas sanitarias activas contra la venta de productos regulados s
 
 ## 2. Panorama competitivo con precios reales
 
-`INVESTIGACION.md` describe el panorama competitivo sin una sola cifra. Esto es lo que se pudo verificar por fuera:
+**[VERIFICADO — precios activos en tienda, agosto 2026]**
+
+`INVESTIGACION.md` describe el panorama competitivo sin una sola cifra. Con varias rondas de verificación de precio en tienda por producto, esto es lo que se confirmó:
+
+| Producto | Segmento | Rango verificado (caja x6) | Tiendas |
+|---|---|---|---|
+| Acuvue Oasys (J&J) | Premium | $220.000–$280.000 | GMO, Lafam, LentesPlus, Opticentro, Visión Natural |
+| AIR OPTIX Plus HydraGlyde (Alcon) | Premium | $250.750–$295.000 | LentesPlus, Lafam, Opticentro |
+| SofLens 59 (Bausch + Lomb) | Media | $110.000–$145.000 | LentesPlus, Farmatodo, Vista Óptica, Lentcenter, Confort Center, Tienda Óptica |
+| **Comfortvue Plus (Interojo)** | Valor | **$90.000–$161.500** | Vista Óptica, Óptica Retinos, Visión Natural |
+
+Fuentes: [GMO](https://gmo.com.co/products/acuvue-oasys) · [Ópticas Lafam](https://www.lafam.com.co/products/tienda-online-acuvue-oasys) · [LentesPlus](https://www.lentesplus.com/co/producto/acuvue-oasys) · [Opticentro](https://opticentro.co/collections/lentes-de-contacto-1/products/acuvue%C2%AE-oasys%C2%AE-con-hydraclear%C2%AE-plus) · [Óptica Visión Natural](https://opticavisionnatural.com/products/acuvue-oasyslcontac0052) · [Vista Óptica](https://www.vistaoptica.com.co/lentes-de-contacto-comfortvue-caja-x6-unidades) · [Óptica Retinos](https://opticaretinos.com/producto/comfortvue-x6/) · [Farmatodo](https://www.farmatodo.com.co/producto/233800025-lentes-de-contacto).
 
 ### 2.1 Comfortvue ya se vende hoy en Colombia — por varios canales distintos al del proveedor
 
-**[VERIFICADO — búsqueda de listados activos, agosto 2026]**
+Este sigue siendo el hallazgo más importante del documento. La línea **Comfortvue** (la misma marca que el proveedor propone como base de "marca propia") ya está disponible hoy en al menos tres ópticas colombianas independientes, con precios **verificados directamente en cada tienda**: Vista Óptica $161.500 (máximo observado; $145.350 con 10% de descuento pagando con Addi o Sistecrédito), Óptica Retinos $130.000, y Óptica Visión Natural $90.000 (mínimo observado).
 
-Esto es el hallazgo más importante de todo este documento y no aparece mencionado en `INVESTIGACION.md`. La línea **Comfortvue** (la misma marca que el proveedor propone como base de "marca propia") ya está disponible hoy, directamente, en múltiples ópticas colombianas independientes:
+**Hallazgo adicional:** el precio máximo de Comfortvue ($161.500) **supera el máximo de SofLens 59** (~$145.000, categoría media) — el producto de "valor" no siempre es más barato que uno de gama media. Además, SofLens 59 ya tiene presencia en retail masivo (**Farmatodo, $124.950**), lo que confirma que la categoría está comoditizada y no es exclusiva de ópticas especializadas.
 
-| Óptica | Precio observado (caja x6) |
-|---|---|
-| Óptica Lentcenter (Comfortvue Aspheric ER) | ~$115.000 COP (promo, regular $135.000) |
-| Optifam | ~$140.000 COP |
-| Vista Óptica, Óptica Moderna, Visión Natural, Óptica Iris, Óptica Retinos | Listan Comfortvue, precio no confirmado en esta pasada |
-
-Fuentes: [Óptica Lentcenter](https://www.opticalentcenter.co/producto/comfortvue-aspheric-er-caja-x6/), [Optifam](https://optifam.co/producto/comfortvue-extra-rango-caja-x-3/), listados adicionales en Vista Óptica, Óptica Moderna, Visión Natural y Óptica Iris.
-
-**Por qué esto importa:** `INVESTIGACION.md` presenta a Comfortvue como la "referencia clave para la estrategia de marca propia" — es decir, comprarle al fabricante y vender bajo un nombre nuevo. Pero el producto físico (mismo fabricante, misma línea) **ya tiene distribución establecida en Colombia a $115.000–$140.000 por caja**, con varias ópticas físicas de respaldo. Un nuevo sitio de dropshipping sin trayectoria compitiendo por el mismo producto, al mismo precio o más caro, no tiene ventaja evidente — y si el proveedor no tiene exclusividad de importación, cualquiera de esas ópticas es competencia directa con la marca ya posicionada y con tienda física de respaldo.
+**Por qué esto importa:** un nuevo sitio de dropshipping sin trayectoria compitiendo por el mismo producto, al mismo precio o más caro, no tiene ventaja evidente — y si el proveedor no tiene exclusividad de importación, cualquiera de esas ópticas es competencia directa con la marca ya posicionada y con tienda física de respaldo.
 
 **[PENDIENTE — crítico]** Preguntarle directamente al proveedor: ¿tiene exclusividad de importación/distribución de Comfortvue en Colombia, o cualquiera puede importarlo como ya lo hacen estas ópticas? Si no hay exclusividad, ¿cuál es la ventaja real frente a comprar directamente en una de estas ópticas ya establecidas?
 
-### 2.2 Referencia de precio de categoría premium (no Comfortvue, para contexto)
+### 2.2 La brecha de precio premium vs. valor sí existe
 
-**[VERIFICADO — Ópticas Lafam, agosto 2026]**
-
-Acuvue Oasys (J&J, categoría premium, mencionada en `INVESTIGACION.md` como comparación) — caja x6:
-- Regular: $191.250 COP (precio promocional) / $225.000 COP (precio de lista)
-- Variante astigmatismo: $204.000–$290.000 COP
-
-Fuente: [Ópticas Lafam — Acuvue Oasys](https://www.lafam.com.co/products/tienda-online-acuvue-oasys)
-
-Esto confirma que sí existe una brecha de precio entre la categoría premium (~$190.000–$290.000) y Comfortvue (~$115.000–$140.000) — la "palanca de marca de valor" que menciona `INVESTIGACION.md` es real como categoría. El problema no es que la brecha no exista: es que **el proyecto no puede capturarla** si Comfortvue ya se vende directamente al público en ese rango de precio por otros canales sin pasar por el proveedor del usuario.
-
-No se pudo verificar precio específico en GMO ni en LentesPlus en esta pasada (arquitectura SPA/headless dificulta el scraping directo, tal como ya señala `INVESTIGACION.md` §3) — **[PENDIENTE]** confirmar manualmente visitando ambos sitios.
+Con el rango premium confirmado ($220.000–$295.000, Acuvue Oasys y AIR OPTIX Plus HydraGlyde) y el rango de valor confirmado ($90.000–$161.500, Comfortvue), la "palanca de marca de valor" que menciona `INVESTIGACION.md` es real como categoría. El problema no es que la brecha no exista: es que **el proyecto no puede capturarla en exclusiva** si Comfortvue ya se vende directamente al público en ese rango de precio por otros canales sin pasar por el proveedor del usuario.
 
 ---
 
 ## 3. Comisiones de pasarela de pago (Colombia, 2026)
 
-**[VERIFICADO — comparativas públicas de pasarelas, agosto 2026]**
+**[VERIFICADO — tarifas oficiales de cada proveedor, agosto 2026]**
 
-| Pasarela | Tarjeta de crédito | PSE |
-|---|---|---|
-| PayU | 2.99% + IVA + $700 COP | 1.89% + $1.200 COP |
-| Wompi | 2.65%–2.99% + IVA, sin cuota mensual | incluido, tasas menores |
-| Mercado Pago | 2.99% + IVA + $700 (crédito) / 2.69% (débito) | ~1.99% |
-| ePayco | ~2.6% efectivo | — |
+| Pasarela | Tarifa base | % final (ticket ~$194k) + 1pp de colchón | Lectura |
+|---|---|---|---|
+| PayU | 3,29% + $300 COP + retenciones en fuente (Renta 1,5% · ICA 0,414%) | **5,1%** | No recomendado — retenciones elevan el costo real y añaden complejidad contable |
+| **Wompi** | 2,65% + $700 COP + IVA 19% (tarjeta) · QR 1% + IVA | **4,6%** | ★ **Recomendada** — ecosistema Bancolombia, sin costo extra en tarjetas internacionales |
+| Mercado Pago | Checkout 2,79% + $800 COP (acredita en 14 días) | **4,8%** | Secundaria — el plazo de acreditación de 14 días destruye flujo de caja temprano |
+| ePayco | Plan Agregador (Davivienda) 2,68% + $900 + IVA, promo 2,64% + $690 + IVA | **4,6%** | Alternativa — tasa promo por tiempo limitado, requiere cuenta Davivienda |
+| Addi | BNPL, no es pasarela — comisión variable no publicada | Variable | Complementaria — requiere persona jurídica, desembolso a 7/30/60 días |
 
-Mezcla típica de e-commerce (60% tarjeta / 30% PSE / 10% Nequi): comisión efectiva blended **~2.5%–2.85%** según pasarela.
+Se aplica un **colchón de +1 punto porcentual** sobre la comisión final de cada pasarela como contingencia (variaciones de plan, IVA o cargos no capturados en la tarifa publicada).
 
-Fuentes: [Tiendanube — pasarelas de pago Colombia 2026](https://www.tiendanube.com/blog/pasarelas-de-pago-colombia/), [btodigital — comparativa 2026](https://btodigital.com/pasarelas-pago-colombia-comparativa-guia-negocio/), [comparapagos.lat — PayU](https://comparapagos.lat/pasarelas/payu/).
+Fuentes: [PayU](https://corporate.payu.com/tarifas-de-payu-en-latinoamerica/) · [Wompi](https://wompi.com/es/co/planes-tarifas/) · [Mercado Pago](https://www.mercadopago.com.co/ayuda/Cu-nto-cuesta-recibir-pagos_220) · [ePayco](https://epayco.com/tarifas/) · [Addi](https://co.addi.com/tasas-tarifas) · [Tiendanube](https://www.tiendanube.com/blog/pasarelas-de-pago-colombia/) · [btodigital](https://btodigital.com/pasarelas-pago-colombia-comparativa-guia-negocio/).
 
-Para los cálculos de la sección 5 se usa **3% sobre el precio de venta** como estimado conservador (redondeando al alza), más un fijo de ~$800 COP por transacción con tarjeta.
+Para los cálculos de la sección 5 se usa **4% + $800 COP** como estimado blended simplificado (Wompi recomendada, redondeando al alza).
 
 ---
 
 ## 4. Logística / última milla
 
-**[VERIFICADO — comparativas de tarifas de paquetería, agosto 2026]**
+**[VERIFICADO — cotizadores oficiales de cada courier, agosto 2026]**
 
-Para un paquete pequeño y liviano (una o pocas cajas de lentes) en rutas urbanas:
-- Coordinadora: ~$15.330 COP
-- Servientrega: ~$20.600 COP
-- Interrapidísimo: desde ~$10.500 COP urbano (más comisión de contraentrega 3–5% si aplica), hasta ~$45.000 en rutas menos cubiertas
+| Courier | Tarifa (paquete ~1 kg) | Notas |
+|---|---|---|
+| Interrapidísimo | $18.500 COP | Mensajería Estándar, cotizador oficial |
+| Coordinadora | $8.040 (Local) – $37.630 (Destinos especiales); Nacional $15.920 | + 1% del valor declarado |
+| **Servientrega** | **$17.750 COP** | Tarifa plana, cotizador oficial — sin componente % ambiguo |
+| TCC | $15.900 (Urbanas) – $91.600 (Aéreo); Regional/Nacional $16.500 | + 2% de flota de manejo |
 
-Fuentes: [Andrey Business — tarifas Interrapidísimo 2026](https://www.andreybusiness.com/blog/interrapidisimo-tarifas-precio-envio-2026), [Andrey Business — Servientrega vs Coordinadora vs Interrapidísimo](https://www.andreybusiness.com/blog/servientrega-vs-coordinadora-vs-interrapidisimo-2026).
+Fuentes: [Interrapidísimo](https://interrapidisimo.com/cotiza-tu-envio) · [Coordinadora](https://coordinadora.com/servicios/documentos/) · [Servientrega](https://www.servientrega.com/wps/portal/cotizador) · [TCC](https://tcc.com.co/envios-nacionales/formas-de-pago-y-tarifas/).
 
-Para los cálculos de la sección 5 se usa **$17.000 COP** como estimado de domicilio nacional promedio (punto medio conservador, sin contraentrega).
+**Transportadora elegida para los cálculos: Servientrega ($17.750 COP).** Es la tarifa plana más barata totalmente verificada sin recargo porcentual de base ambigua (a diferencia de Coordinadora y TCC, cuyo recargo del 1–2% aplica sobre el valor declarado o el flete y complica el cálculo simplificado).
 
 ---
 
@@ -125,46 +123,37 @@ Esta sección responde la pregunta real: **¿a qué costo de proveedor el negoci
 Costo máximo viable del proveedor = Precio de venta
                                      − domicilio/logística
                                      − comisión de pasarela
-                                     − empaque/otros costos fijos
 ```
 
-Insumos verificados: domicilio ≈ $17.000 (§4), pasarela ≈ 3% del precio de venta + $800 fijo (§3). Empaque/otros se estima en $3.000 COP (no verificado — **[PENDIENTE]** confirmar con el proveedor si él lo asume o el dropshipper).
+Insumos verificados: domicilio **$17.750** (Servientrega, §4), pasarela **4% del precio de venta + $800 fijo** (Wompi recomendada, §3).
 
-### 5.2 Escenario con el precio ya observado en el mercado para Comfortvue ($115.000–$140.000)
+### 5.2 Tabla de sensibilidad — Comfortvue Plus (único producto que el proyecto compraria al proveedor)
 
-| Precio de venta | Domicilio | Pasarela (3% + $800) | Empaque | Costos fijos totales | **Costo máx. viable proveedor** |
-|---|---|---|---|---|---|
-| $115.000 (piso de mercado) | $17.000 | $4.250 | $3.000 | $24.250 | **$90.750** |
-| $140.000 (techo de mercado) | $17.000 | $5.000 | $3.000 | $25.000 | **$115.000** |
+Usando los tres precios de venta verificados en tienda hoy — **$90.000** (mínimo, Óptica Visión Natural), **$127.000** (medio, promedio aproximado) y **$161.500** (máximo, Vista Óptica):
 
-Es decir: si el proveedor cobra **más de ~$90.750–$115.000 por caja** (según a qué precio se logre vender, y recordando que $115.000–$140.000 ya es lo que cobra la competencia directa por el mismo producto), el negocio **no genera margen**, incluso antes de contar publicidad/CAC, devoluciones o impuestos sobre la utilidad.
+| Costo proveedor | Costo total (dom.+pasarela) | Precio de venta | Margen | % |
+|---|---|---|---|---|
+| $36.350 | $58.500 | $90.000 (mínimo) | $31.500 | 35,0% |
+| $67.850 | $90.000 | $90.000 (mínimo) | $0 | 0,0% (punto de equilibrio) |
+| $58.920 | $82.550 | $127.000 (medio) | $44.450 | 35,0% |
+| $103.370 | $127.000 | $127.000 (medio) | $0 | 0,0% (punto de equilibrio) |
+| $79.965 | $104.975 | $161.500 (máximo) | $56.525 | 35,0% |
+| $136.490 | $161.500 | $161.500 (máximo) | $0 | 0,0% (punto de equilibrio) |
 
-### 5.3 Tabla de sensibilidad de margen
+Tabla completa (incluyendo el escalón de 15%) en `index.html` §05 (Viabilidad).
 
-Usando el ejemplo del propio usuario como plantilla (precio de venta $110.000, domicilio $10.000, pasarela $5.000 → costo total con proveedor a $70.000 = $85.000, margen $25.000 = 22.7%), extendida a varios escenarios de costo de proveedor:
+### 5.3 Qué significa "viable"
 
-| Costo proveedor | Precio de venta | Domicilio | Pasarela | Costo total | Margen ($) | Margen (%) |
-|---|---|---|---|---|---|---|
-| $60.000 | $115.000 | $17.000 | $4.250 | $81.250 | $33.750 | 29,3% |
-| $70.000 | $115.000 | $17.000 | $4.250 | $91.250 | $23.750 | 20,7% |
-| $80.000 | $115.000 | $17.000 | $4.250 | $101.250 | $13.750 | 12,0% |
-| $90.000 | $115.000 | $17.000 | $4.250 | $111.250 | $3.750 | 3,3% |
-| $95.000 | $115.000 | $17.000 | $4.250 | $116.250 | **−$1.250** | **−1,1% (pérdida)** |
-| $70.000 | $140.000 | $17.000 | $5.000 | $92.000 | $48.000 | 34,3% |
-| $90.000 | $140.000 | $17.000 | $5.000 | $112.000 | $28.000 | 20,0% |
-| $110.000 | $140.000 | $17.000 | $5.000 | $132.000 | $8.000 | 5,7% |
+Este margen es **bruto**: todavía no descuenta adquisición de cliente (CAC/publicidad), devoluciones por error de fórmula óptica, ni impuestos sobre la utilidad. Como criterio de decisión (ver también `index.html` §05):
 
-### 5.4 Qué significa "viable"
+- **Margen bruto ≥ 35%** → viable con pauta (aguanta inversión en adquisición pagada).
+- **Margen bruto 20–35%** → viable con condiciones (solo con adquisición de bajo costo).
+- **Margen bruto 10–20%** → analizar (insuficiente para pauta; revisar el modelo).
+- **Margen bruto < 10%** → no viable / pérdida.
 
-Este margen es **bruto**: todavía no descuenta adquisición de cliente (CAC/publicidad), devoluciones por error de fórmula óptica, ni impuestos sobre la utilidad — todos mencionados como "costos a vigilar" en `INVESTIGACION.md` §5 pero nunca cuantificados. En e-commerce DTC, CAC suele consumir 15–30% del precio de venta cuando se depende de pauta paga. Por eso, como criterio de decisión:
+Con el rango de precio de mercado ya observado para Comfortvue ($90.000–$161.500), **el costo de proveedor tendría que estar entre $36.350 y $79.965 (≈$36k–$80k)** para que el proyecto sea viable con pauta (≥35%) — y eso asumiendo que se pueda vender al mismo precio que la competencia ya establecida, lo cual no está garantizado (ver §2.1).
 
-- **Margen bruto < 20%** → no viable; no queda espacio para CAC ni devoluciones.
-- **Margen bruto 20–35%** → viable solo con canal de adquisición de bajo costo (orgánico, referidos, comunidad) — no aguanta pauta paga agresiva.
-- **Margen bruto > 35%** → viable incluso con algo de inversión en adquisición pagada.
-
-Con el rango de precio de mercado ya observado para Comfortvue ($115.000–$140.000), **el costo de proveedor tendría que estar entre $60.000 y máximo ~$85.000–$90.000** para que el proyecto sea viable bajo estos criterios — y eso asumiendo que se pueda vender al mismo precio que la competencia ya establecida, lo cual no está garantizado (ver §2.1: sin diferenciación clara, un dropshipper nuevo compite en desventaja frente a ópticas físicas ya posicionadas con el mismo producto).
-
-**[PENDIENTE — crítico, el único número que falta]** El precio real que cobraría el proveedor por caja, MOQ (pedido mínimo), incoterms y tiempos de entrega. Con ese dato, se ubica directamente en la tabla de la sección 5.3 y se lee si el negocio es viable o no.
+**[PENDIENTE — crítico, el único número que falta]** El precio real que cobraría el proveedor por caja, MOQ (pedido mínimo), incoterms y tiempos de entrega. Con ese dato, se ubica directamente en la tabla interactiva de `index.html` §05 y se lee si el negocio es viable o no.
 
 ---
 
@@ -174,7 +163,7 @@ Con el rango de precio de mercado ya observado para Comfortvue ($115.000–$140.
 |---|---|
 | **Regulatorio (INVIMA)** | Ver §1 — condición de entrada, no "costo a vigilar". Vender sin registro sanitario vigente es ilegal. |
 | **Dependencia de proveedor único** | Toda la tesis depende de un solo proveedor (el amigo). Sin contrato, sin exclusividad confirmada, y con el mismo producto ya disponible por otros canales (§2.1), el poder de negociación del dropshipper es bajo. |
-| **Producto ya posicionado por terceros** | Comfortvue no es un producto nuevo para el mercado colombiano (§2.1) — reduce el argumento de "marca de valor diferenciada". |
+| **Producto ya posicionado por terceros** | Comfortvue no es un producto nuevo para el mercado colombiano (§2.1), y su precio máximo ($161.500) ya supera el máximo de un producto de gama media (SofLens 59, $145.000) — reduce el argumento de "marca de valor diferenciada". |
 | **Devoluciones por fórmula óptica incorrecta** | Un lente de contacto mal graduado no se puede revender; mencionado en `INVESTIGACION.md` pero sin tasa estimada de devolución ni política de costos. |
 | **Dispositivo médico = mayor exigencia de confianza** | Comprar un dispositivo médico en un sitio nuevo sin trayectoria ni respaldo físico es una barrera de conversión más alta que en otras categorías DTC — no está reflejado en el análisis de CAC. |
 | **Aranceles/importación** | Si el proveedor importa desde Corea (Interojo), hay que confirmar si esos costos ya están incluidos en el precio que cotice, o si son adicionales — listado como pendiente en ambos documentos. |
@@ -194,13 +183,13 @@ Con el rango de precio de mercado ya observado para Comfortvue ($115.000–$140.
 
 ## 8. Conclusión
 
-**La viabilidad del proyecto no se puede concluir todavía.** No es un tema de que los números sean malos — es que el único dato que falta (§5.4, §7.1) es exactamente el que determina el resultado: el costo de compra al proveedor. Con la información hoy disponible:
+**La viabilidad del proyecto no se puede concluir todavía.** No es un tema de que los números sean malos — es que el único dato que falta (§5, §7) es exactamente el que determina el resultado: el costo de compra al proveedor. Con la información hoy disponible:
 
-- Existe una brecha de precio real entre categoría premium (~$190.000–$290.000) y categoría de valor (~$115.000–$140.000) que sí sustenta, en principio, un modelo DTC de "marca de valor" (lo único de la tesis original que este análisis confirma con datos).
+- Existe una brecha de precio real entre categoría premium (~$220.000–$295.000) y categoría de valor (~$90.000–$161.500) que sí sustenta, en principio, un modelo DTC de "marca de valor" (lo único de la tesis original que este análisis confirma con datos).
 - Pero el mismo producto (Comfortvue) **ya se vende en ese rango de precio por varios canales establecidos en Colombia**, lo cual reduce o elimina la ventaja competitiva planteada, a menos que el proveedor ofrezca exclusividad o un costo notablemente por debajo del resto del mercado.
-- El umbral matemático es claro: **con precio de venta $115.000–$140.000, el costo de proveedor debe ubicarse entre $60.000 y ~$85.000–$90.000 por caja** para dejar un margen bruto viable (≥20–35%, antes de CAC y devoluciones).
+- El umbral matemático es claro: **con precio de venta $90.000–$161.500, el costo de proveedor debe ubicarse entre ~$36.350 y $79.965 (≈$36k–$80k)** para dejar un margen bruto viable con pauta (≥35%), usando Wompi como pasarela (4% + $800, simplificado) y Servientrega como transportadora ($17.750).
 
-**Condición para poder concluir:** llevar la pregunta 1 del checklist (§7) al proveedor, ubicar su cotización real en la tabla de la sección 5.3, y verificar la pregunta 2 (INVIMA) y 3 (exclusividad) antes de comprometer cualquier inversión o inventario.
+**Condición para poder concluir:** llevar la pregunta 1 del checklist (§7) al proveedor, ubicar su cotización real en la tabla interactiva de `index.html` §05, y verificar la pregunta 2 (INVIMA) y 3 (exclusividad) antes de comprometer cualquier inversión o inventario.
 
 ---
 
@@ -209,12 +198,24 @@ Con el rango de precio de mercado ya observado para Comfortvue ($115.000–$140.
 - Decreto 4725 de 2005 (Ministerio de la Protección Social) — dispositivos médicos y registro sanitario INVIMA.
 - [INVIMA — Preguntas frecuentes, dispositivos médicos](https://www.invima.gov.co/productos-vigilados/dispositivos-medicos/preguntas-frecuentes-dispositivos)
 - [INVIMA — Alerta sanitaria sobre venta de productos sin registro por internet](https://mesagil.invima.gov.co/biblioteca/alerta-invima-productos-venta-internet-riesgo-sanitario-2024)
-- [Óptica Lentcenter — Comfortvue Aspheric ER caja x6](https://www.opticalentcenter.co/producto/comfortvue-aspheric-er-caja-x6/)
-- [Optifam — Comfortvue Extra Rango caja x3](https://optifam.co/producto/comfortvue-extra-rango-caja-x-3/)
+- [GMO — Acuvue Oasys](https://gmo.com.co/products/acuvue-oasys)
 - [Ópticas Lafam — Acuvue Oasys](https://www.lafam.com.co/products/tienda-online-acuvue-oasys)
+- [LentesPlus — Acuvue Oasys](https://www.lentesplus.com/co/producto/acuvue-oasys)
+- [Opticentro — Acuvue Oasys](https://opticentro.co/collections/lentes-de-contacto-1/products/acuvue%C2%AE-oasys%C2%AE-con-hydraclear%C2%AE-plus)
+- [Óptica Visión Natural — Acuvue Oasys / Comfortvue](https://opticavisionnatural.com/products/acuvue-oasyslcontac0052)
+- [Vista Óptica — Comfortvue / SofLens 59](https://www.vistaoptica.com.co/lentes-de-contacto-comfortvue-caja-x6-unidades)
+- [Óptica Retinos — Comfortvue](https://opticaretinos.com/producto/comfortvue-x6/)
+- [Farmatodo — SofLens 59](https://www.farmatodo.com.co/producto/233800025-lentes-de-contacto)
+- [PayU — tarifas](https://corporate.payu.com/tarifas-de-payu-en-latinoamerica/)
+- [Wompi — planes y tarifas](https://wompi.com/es/co/planes-tarifas/)
+- [Mercado Pago — costos](https://www.mercadopago.com.co/ayuda/Cu-nto-cuesta-recibir-pagos_220)
+- [ePayco — tarifas](https://epayco.com/tarifas/)
+- [Addi — tasas y tarifas](https://co.addi.com/tasas-tarifas)
 - [Tiendanube — Pasarelas de pago Colombia 2026](https://www.tiendanube.com/blog/pasarelas-de-pago-colombia/)
 - [btodigital — Pasarelas de pago Colombia 2026, comparativa de tarifas](https://btodigital.com/pasarelas-pago-colombia-comparativa-guia-negocio/)
-- [comparapagos.lat — PayU comisiones](https://comparapagos.lat/pasarelas/payu/)
-- [Andrey Business — Tarifas Interrapidísimo 2026](https://www.andreybusiness.com/blog/interrapidisimo-tarifas-precio-envio-2026)
-- [Andrey Business — Servientrega vs Coordinadora vs Interrapidísimo 2026](https://www.andreybusiness.com/blog/servientrega-vs-coordinadora-vs-interrapidisimo-2026)
+- [Interrapidísimo — cotizador oficial](https://interrapidisimo.com/cotiza-tu-envio)
+- [Coordinadora — tarifas oficiales mensajería](https://coordinadora.com/servicios/documentos/)
+- [Servientrega — cotizador oficial](https://www.servientrega.com/wps/portal/cotizador)
+- [TCC — formas de pago y tarifas](https://tcc.com.co/envios-nacionales/formas-de-pago-y-tarifas/)
 - `INVESTIGACION.md` de este mismo repositorio (documento auditado).
+- `index.html` de este mismo repositorio — **fuente de verdad vigente**, con todas las tablas interactivas y el detalle completo de cada dato citado aquí.
