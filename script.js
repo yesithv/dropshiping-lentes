@@ -59,3 +59,23 @@ function initScrollSpy(){
   sections.forEach(function(sec){observer.observe(sec);});
 }
 document.addEventListener('DOMContentLoaded',initScrollSpy);
+
+function wrapTablesForScroll(){
+  document.querySelectorAll('table').forEach(function(table){
+    if(table.closest('.table-scroll'))return;
+    var wrapper=document.createElement('div');
+    wrapper.className='table-scroll';
+    table.parentNode.insertBefore(wrapper,table);
+    wrapper.appendChild(table);
+  });
+}
+document.addEventListener('DOMContentLoaded',wrapTablesForScroll);
+
+function initMobileNav(){
+  var toggle=document.getElementById('nav-toggle');
+  if(!toggle)return;
+  document.querySelectorAll('.navlinks a').forEach(function(link){
+    link.addEventListener('click',function(){toggle.checked=false;});
+  });
+}
+document.addEventListener('DOMContentLoaded',initMobileNav);
