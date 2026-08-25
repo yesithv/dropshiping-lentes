@@ -1,0 +1,26 @@
+Investigar 
+Toricos: Muestra: [Sale más costos]
+Esfera: -1.50
+Cilindro (Astigmatismo): -1.25
+Eje: 90 grados
+
+Esfericos:
+Sólo pinden esfera
+
+Valores de Oswald - Esfericos caja x6
+Se pueden usar máx 9 meses 3 pares
+Material: HidroGel silicona
+Acuvue Oasys: 165
+AIR OPTIX Plus HydraGlyde: 200
+
+Material: silicona
+SofLens 59: 80
+Comfortvue Plus: 
+	Normal: [-12 +8]: 90
+	Extra-Rango: [-12.50 a -20] [+8.50 a +12]: 110
+
+Kit Gratis x2 Cajas: costo: 11
+
+Kit:
+	Estuche + Liquido: 11 vender: 20
+	
